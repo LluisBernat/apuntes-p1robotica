@@ -270,7 +270,7 @@ Fibonacci(0) = 0
 Fibonacci(1) = 1
 ~~~
 
-Lo pasadmos a C:
+Lo pasamos a C:
 
 ~~~c
 int fib(int n)
