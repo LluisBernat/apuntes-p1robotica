@@ -1,8 +1,8 @@
 
 ## Programación 1. Grado de Robótica
 
-Toda la información está disponible en el [sitio Moodle de P1](https://moodle2017-18.ua.es/moodle/course/view.php?id=247) y en la
-[ficha del campus virtual](http://cv1.cpd.ua.es/ConsPlanesEstudio/cvFichaAsiEEES.asp?wCodEst=C211&wcodasi=33704&wLengua=C&scaca=2017-18).
+Toda la información está disponible en el [sitio Moodle de P1](https:// ) y en la
+[ficha del campus virtual](https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wCodEst=C211&wcodasi=33704&wlengua=es&scaca=2018-19#).
 
 
 ### Datos académicos de la asignatura
@@ -13,15 +13,15 @@ prácticas de 2 h. a la semana
 
 **Profesores**:  
 
-* Antonio Botía ([e-mail](mailto:abotia@dccia.ua.es)): Grupos de prácticas: 2 y 3.
-* Cristina Pomares ([e-mail](mailto:cpomares@ua.es)): Grupo de teoría: 1. Grupo de prácticas: 1.
+* Antonio Botía ([e-mail](mailto:abotia@dccia.ua.es)): Grupos de prácticas: 1 y 4.
+* Cristina Pomares ([e-mail](mailto:cpomares@ua.es)): Grupo de teoría: 1. Grupos de prácticas: 2 y 3.
 
 ### Recursos de la asignatura
 
-* [Sitio Moodle](https://moodle2017-18.ua.es/moodle/course/view.php?id=247) contiene los
+* [Sitio Moodle](https:// ) contiene los
   apuntes, transparencias, prácticas y otros materiales docentes
-* [Foro de consultas y anuncios](https://moodle2017-18.ua.es/moodle/mod/forum/view.php?id=12384)
-  en el sitio Moodle (sólo accesible a estudiantes)
+* [Foro de consultas y anuncios](https:// )
+  en el sitio Moodle 
 
 ### Objetivos y competencias
 
@@ -46,37 +46,35 @@ prácticas de 2 h. a la semana
 
 ### Temario
 
-* Tema 1. **Introducción a la programación**: Representación de la información. Concepto de programa. Fases de desarrollo de un programa. El lenguaje C. Estructura de un programa. Comentarios en un programa. Entornos de programación.
+* **Tema 1. Introducción a la programación**: Representación de la información. Concepto de programa. Fases de desarrollo de un programa. El lenguaje C. Estructura de un programa. Comentarios en un programa. Entornos de programación.
 
-* Tema 2. **Tipos de datos simples**: Concepto de dato. Constantes y variables. Sentencias de asignación. Expresiones y operadores. Sentencias de entrada/salida de datos.
+* **Tema 2. Tipos de datos simples**: Concepto de dato. Constantes y variables. Sentencias de asignación. Expresiones y operadores. Sentencias de entrada/salida de datos.
 
-* Tema 3. **Sentencias de control**: Algoritmos y programas. Estructura secuencial. Estructuras de selección. Estructuras de repetición.
+* **Tema 3. Sentencias de control**: Algoritmos y programas. Estructura secuencial. Estructuras de selección. Estructuras de repetición.
 
-* Tema 4. **Programación modular**: Descomposición modular. Concepto de módulo. Comunicación entre módulos. Procedimientos y funciones. Parámetros actuales y formales. Paso de parámetros por valor y por referencia. Ámbito de una variable. Variables globales y locales. Efecto lateral. Funciones predefinidas
+* **Tema 4. Programación modular**: Descomposición modular. Concepto de módulo. Comunicación entre módulos. Funciones. Parámetros actuales y formales. Paso de parámetros por valor y por referencia. Ámbito de una variable. Variables globales y locales. Efecto lateral. Funciones predefinidas
 
-* Tema 5. **Recursión**: Definición. Esquema básico. Codificación en C. Características
+* **Tema 5. Recursión**: Definición. Esquema básico. Codificación en C. Características
 
-* Tema 6. **Tipos de datos estructurados: Arrays**: Concepto de dato estructurado. El tipo array. Arrays unidimensionales, bidimensionales y multidimensionales. Cadenas de caracteres
+* **Tema 6. Tipos de datos estructurados: Arrays**: Concepto de dato estructurado. El tipo array. Arrays unidimensionales, bidimensionales y multidimensionales. Cadenas de caracteres
 
-* Tema 7. **Punteros y memoria dinámica**: Memoria estática vs. dinámica. Creación, inicialización, asignación y liberación de memoria. Conversión de tipos.
+* **Tema 7. Punteros y memoria dinámica**: Memoria estática vs. dinámica. Creación, inicialización, asignación y liberación de memoria. Conversión de tipos.
 
-* Tema 8. **Tipos de datos estructurados: Registros**: Concepto de registro. Registros en C. Operaciones sobre registros. Arrays de registro
+* **Tema 8. Tipos de datos estructurados: Registros**: Concepto de registro. Registros en C. Operaciones sobre registros. Arrays de registro
 
-* Tema 9. **Entrada/salida**: Declaración, apertura, lectura y escritura de ficheros de texto y binarios en C.
+* **Tema 9. Entrada/salida**: Declaración, apertura, lectura y escritura de ficheros de texto y binarios en C.
 
 
 ### Prácticas
 
-Durante las horas prácticas se realizarán de forma **individual** ejercicios de programación relacionados con los conceptos que se están estudiando en ese momento que servirán para reforzar y profundizar en las competencias de la asignatura.
+Durante las clases prácticas se realizarán de forma **individual** ejercicios de programación relacionados con los conceptos que se están estudiando en ese momento que servirán para reforzar y profundizar en las competencias de la asignatura.
 
-Se realizarán 2 prácticas:
+Durante todo el curso se realizará una práctica relacionada con la robótica. El desarrollo será de forma incremental semana a semana, donde se irá construyendo paso a paso una solución parcial hasta llegar a la implementación final.
 
-* La primera práctica será guiada, distribuida en sesiones de forma incremental para que semana a semana se vaya construyendo una solución parcial hasta llegar a la implementación total.
-* La segunda práctica será un problema a desarrollar por el alumno
 
 ### Horarios
 
-La distribución de grupos del curso 2017-18 es la siguiente:
+La distribución de grupos del curso 2018-19 es la siguiente:
 
 <img src="imagenes/horarios.png" width="700px"/>
 
@@ -86,28 +84,20 @@ La distribución de grupos del curso 2017-18 es la siguiente:
 
 En la convocatoria ordinaria (enero) se realizará una evaluación continua con las siguientes pruebas:
 
-* **Parte práctica**:
-     - *Control de prácticas 1*: pondera un 10% de la nota final
-     - *Control de prácticas 2*: pondera un 30% de la nota final
-* **Parte teórica**:
-     - *Control de teoría*: pondera un 10% de la nota final
-     - *Examen de teoría*: pondera un 50% de la nota final. Se realizará en la fecha oficial asignada al examen final de la convocatoria de enero
+* **Cuestionarios**:  ponderan un **50%** en la nota final
+   - Se realizará un cuestionario al final de cada sesión práctica sobre el contenido trabajado en esa sesión y los conceptos **teóricos** asociados.
+   - La nota de los cuestionarios se calculará sumando las calificaciones obtenidas en cada uno y dividiendo por el número de cuestionarios de la asignatura.
+   - No se exige nota mínima ni en los cuestionarios individuales ni en la calificación final.
+* **Examen escrito**: pondera un **50%** en la nota final
+     - Sobre todo el temario de la asignatura.
+     - No se exige nota mínima.
+     - Se realizará en la fecha oficial asignada al examen final de la convocatoria de enero.
 
-
-La calificación final de la asignatura se obtiene mediante la suma ponderada de todas las pruebas.
-
-En las pruebas se valora especialmente el diseño de los programas y el correcto estilo de programación así como la ausencia de errores.
-
-Las entregas de las prácticas no ponderarán para la calificación final, pero son esenciales para el aprendizaje de los conceptos, técnicas de la asignatura y para la preparación de los controles de prácticas. En estos controles se evaluará el conocimiento que el alumno ha adquirido con la realización de dichas prácticas.
+Las entregas de las prácticas no ponderarán para la calificación final, pero su realización es **imprescindible** para el aprendizaje de los conceptos, técnicas de la asignatura y para la preparación de las pruebas en las que se evaluarán los conocimientos adquiridos.
 
 #### Convocatoria extraordinaria
 
-Para la convocatoria extraordinaria de julio se podrán realizar las actividades:
-
-- **Examen teórico**: pondera un 60% de la nota final
-- **Examen práctico**: pondera un 40% de la nota final
-
-En esta convocatoria sólo se realizará la parte (teoría o práctica) que no se haya aprobado en la convocatoria ordinaria. Es decir, si la parte teórica (control teoría * 0.1 + prueba escrita * 0.5) >= 3, se guarda la nota (un 5 mínimo sin ponderar). Lo mismo sucede con la parte práctica, si (control prácticas 1 * 0.1 + control prácticas 2 * 0.3) >= 2, se guarda la nota (un 5 mínimo sin ponderar). En estos casos sólo habría que hacer la parte no aprobada.
+En la convocatoria extraordinaria se realizará un examen final escrito sobre todos los bloques temáticos cuya calificación representará el 100% de la nota de la asignatura.
 
 #### Plagios
 
@@ -119,6 +109,10 @@ En Moodle se publican los apuntes de la asignatura, con ejercicios, explicacione
 
 Los apuntes de la asignatura se han confeccionado utilizando la siguiente bibliografía, que podéis utilizar para consultar o ampliar algunos conceptos:
 
+<img src="imagenes/carretero-cover.jpg" width="170px"/>
+
+* CARRETERO Pérez, Jesús. Fundamentos de programación. 2007.  ISBN:	9788497325509
+ 
 <img src="imagenes/kochan-cover.jpg" width="170px"/>
 
 * KOCHAN, Stephen G. Programming in C. Fourth Edition, 2015. ISBN: 978-0321776419
@@ -127,10 +121,6 @@ Los apuntes de la asignatura se han confeccionado utilizando la siguiente biblio
 
 * KERNIGHAN, Brian W.; RITCHIE, Dennis M. El lenguaje de programación C. Pearson Educación, 1991. ISBN: 968-880-205-0
 
-<img src="imagenes/carretero-cover.jpg" width="170px"/>
-
-* CARRETERO Pérez, Jesús. Fundamentos de programación. 2007.  ISBN:	9788497325509
-
 <img src="imagenes/gottfried-cover.jpg" width="170px"/>
 
 * GOTTFRIED, Byron S., et al. Programación en C. McGraw-Hill, 1991. ISBN: 9788448110680
@@ -138,6 +128,6 @@ Los apuntes de la asignatura se han confeccionado utilizando la siguiente biblio
 
 ----
 
-Programación 1, Grado de Robótica, curso 2017-18  
+Programación 1, Grado de Robótica, curso 2018-19  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares
