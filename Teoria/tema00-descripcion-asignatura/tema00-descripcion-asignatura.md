@@ -1,5 +1,5 @@
 
-## Programación 1. Grado de Robótica
+## Programación 1. Grado de Robótica. Curso 2018-2019
 
 Toda la información está disponible en el [sitio Moodle de P1](https:// ) y en la
 [ficha del campus virtual](https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wCodEst=C211&wcodasi=33704&wlengua=es&scaca=2018-19#).
@@ -21,7 +21,7 @@ prácticas de 2 h. a la semana
 * [Sitio Moodle](https://moodle2018-19.ua.es/moodle/course/view.php?id=1384 ) contiene los
   apuntes, transparencias, prácticas y otros materiales docentes
 * [Foro de consultas y anuncios](https://moodle2018-19.ua.es/moodle/mod/forum/view.php?id=10141)
-  en el sitio Moodle 
+  en el sitio Moodle
 
 ### Objetivos y competencias
 
@@ -112,7 +112,7 @@ Los apuntes de la asignatura se han confeccionado utilizando la siguiente biblio
 <img src="imagenes/carretero-cover.jpg" width="170px"/>
 
 * CARRETERO Pérez, Jesús. Fundamentos de programación. 2007.  ISBN:	9788497325509
- 
+
 <img src="imagenes/kochan-cover.jpg" width="170px"/>
 
 * KOCHAN, Stephen G. Programming in C. Fourth Edition, 2015. ISBN: 978-0321776419
