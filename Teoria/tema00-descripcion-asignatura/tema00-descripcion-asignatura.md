@@ -18,9 +18,9 @@ prácticas de 2 h. a la semana
 
 ### Recursos de la asignatura
 
-* [Sitio Moodle](https:// ) contiene los
+* [Sitio Moodle](https://moodle2018-19.ua.es/moodle/course/view.php?id=1384 ) contiene los
   apuntes, transparencias, prácticas y otros materiales docentes
-* [Foro de consultas y anuncios](https:// )
+* [Foro de consultas y anuncios](https://moodle2018-19.ua.es/moodle/mod/forum/view.php?id=10141)
   en el sitio Moodle 
 
 ### Objetivos y competencias
