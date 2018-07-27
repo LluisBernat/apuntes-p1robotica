@@ -1,5 +1,5 @@
 
-# Tema 6: Punteros y memoria dinámica
+# Tema 6: Punteros y memoria dinámica 
 
 ## Contenidos
 
