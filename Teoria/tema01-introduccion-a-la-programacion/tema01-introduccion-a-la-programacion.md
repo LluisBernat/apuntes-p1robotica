@@ -4,7 +4,7 @@
 ## Contenidos 
 
 - [1. Lenguajes de programación](#1)
-    - [1.1. La computadora y sus componentes](#1-1)
+    - [1.1. El ordenador y sus componentes](#1-1)
     - [1.2. Representación de la información](#1-2)
     - [1.3. Programa](#1-3)
     - [1.4. Los primeros lenguajes de programación](#1-4)
@@ -15,7 +15,6 @@
 	 - [3.1. Características deseables de un programa](#3-1)
 	 - [3.2. Pasos para desarrollar un programa](#3-2)
 	 - 	[3.3. Normas de estilo para programar en C](#3-3)
-- [4. Bibliografía](#4) 
 
 
 ## <a name="1"/> 1. Lenguajes de programación
@@ -23,17 +22,14 @@
 Un lenguaje de programación permite especificar procesos que se
 ejecutan en computadores. Un programa escrito en un determinado
 lenguaje nos permite definir las instrucciones que realizará el
-computador (o, más en concreto, el procesador) que lo ejecute. Por
+ordenador (o, más en concreto, el procesador) que lo ejecute. Por
 ello, para entender en profundidad qué es un lenguaje de programación
-es fundamental conocer el computador, el instrumento sobre el que que
-programan.
+es fundamental conocer el ordenador. 
 
 
-### <a name="1-1"/> 1.1. La computadora y sus componentes
+### <a name="1-1"/> 1.1. El ordenador y sus componentes
 
-El término Informática proviene del francés como contracción de las palabras *information* y *automatique*; en inglés *Computer Science*.La computadora digital también llamada ordenador (del francés *ordinateur*), es un instrumento de gran importancia en la sociedad actual, constituyéndose en una herramienta habitual en todos los entornos de trabajo.
-
-Las computadoras poseen los siguientes componentes:
+Lor ordenadores poseen los siguientes componentes:
 * **Dispositivos de entrada**. Se encargan de capturar información de entrada a la computadora: teclado, ratón, micrófono, etc.
 * **Dispositivos de salida**. Se encargan de la salida de información de la computadora: monitor, impresora, altavoces, etc.
 * **Dispositivos de almacenamiento**. Se encargan de almacenar los datos para su uso posterior: disco duro, CD-ROM, etc.
@@ -62,11 +58,11 @@ La información se representa en una computadora mediante el uso de dos estados
 Esta dualidad nos permite adoptar un sistema **binario** para representar la información. Así, la presencia de señal se representa por el 1 y la ausencia por el 0. Esto nos lleva al concepto de **bit**, que es la unidad mínima de información. Un *bit* puede adoptar los valores 0 ó 1.Un único *bit* aporta poca cantidad de información. Es por ello que los *bits* seagrupan de 8 en 8 formando un **byte**. Un *byte* permite representar 2^8 = 256 combinaciones diferentes.A su vez, los *bytes* se agrupan formando **palabras**, que dependiendo de cada computadora pueden ser de 8, 16, 32 ó 64 *bytes*.
 ### <a name="1-3"/> 1.3. Programa
 
-Un programa es el conjunto ordenado de instrucciones que indican a la computadora las acciones que debe realizar para cumplir una tarea específica. En este sentido, con un programa especificamos a la computadora qué tiene que hacer, en el orden en el que lo tiene que hacer y los datos que ha de usar para ello.Los programas están escritos en un determinado lenguaje formal libre de ambigüedades, de forma que la especificación de lo que queremos hacer sea unívoca. 
+Un programa es el conjunto ordenado de instrucciones que indican a la computadora las acciones que debe realizar para cumplir una tarea específica. En este sentido, con un programa especificamos al ordenador qué tiene que hacer, en el orden en el que lo tiene que hacer y los datos que ha de usar para ello.Los programas están escritos en un determinado lenguaje formal libre de ambigüedades, de forma que la especificación de lo que queremos hacer sea unívoca. 
 
 Con respecto al nivel de abstracción de estos lenguajes, los podemos clasificar en dos grandes grupos:  
   * **Lenguajes Máquina**: Como su propio nombre indica, se trata de los lenguajes "nativos" de la computadora, y por ello es capaz de procesarlos directamente. Sumamente costosos para el programador.
-  * **Lenguajes de Alto Nivel**: Se trata de lenguajes mucho más cercanos al lenguaje humano, con un alto nivel de abstracción, por lo que son más comprensibles y menos engorrosos de usar para el programador. Los programas construidos con estos lenguajes han de ser traducidos a lenguaje máquina mediante el uso de un compilador para que la computadora los pueda procesar. Pascal, C, C++, Java, etc.
+  * **Lenguajes de Alto Nivel**: Se trata de lenguajes mucho más cercanos al lenguaje humano, con un alto nivel de abstracción, por lo que son más comprensibles y menos engorrosos de usar para el programador. Los programas construidos con estos lenguajes han de ser traducidos a lenguaje máquina mediante el uso de un compilador para que la computadora los pueda procesar. Python, C, C++, Java, etc.
 
 ### <a name="1-4"/> 1.4. Los primeros lenguajes de programación
 
@@ -92,10 +88,7 @@ B: 2
 ~~~
 
 El lenguaje ensamblador constituye un gran avance en lo que a facilidad de comprensión se requiere a la hora de programar. De todas formas, este lenguaje sigue teniendo varios inconvenientes: Por un lado, cada computadora posee un lenguaje ensamblador distinto, por lo que para utilizar un programa en otra computadora distinta habría que rescribirlo. Por otro lado, el lenguaje sigue siendo demasiado cercano al lenguaje máquina, lo que dificulta su comprensión y por tanto encarece el desarrollo de programas de gran extensión.
-Los lenguajes de alto nivel se caracterizan por no ser dependientes de máquina. Mediante la compilación de un programa escrito en lenguaje de alto nivel podremos ejecutarlo en cualquier máquina. Para ello, necesitaremos un compilador de ese lenguaje para cada máquina en la que queramos ejecutar nuestro programa.Otra característica de estos lenguajes es su sintaxis es más cercana al lenguaje natural del programador y proporciona distintas herramientas de abstracción que facilitan la programación.
-
-A finales de la década de los 40 se empiezan a intentar resolver con los primeros computadores los primeros problemas matemáticos distintos de operaciones numéricas: codificación y descodificación, problemas
-combinatorios como el coloreado del mapa o problemas de ordenación.
+Los **lenguajes de alto nivel** se caracterizan por no ser dependientes de máquina. Mediante la compilación de un programa escrito en lenguaje de alto nivel podremos ejecutarlo en cualquier máquina. Para ello, necesitaremos un compilador de ese lenguaje para cada máquina en la que queramos ejecutar nuestro programa.Otra característica de estos lenguajes es su sintaxis es más cercana al lenguaje natural del programador y proporciona distintas herramientas de abstracción que facilitan la programación.
 
 
 ### <a name="1-5"/> 1.5. Los primeros lenguajes de alto nivel
@@ -106,26 +99,10 @@ década de los 50:
 - FORTRAN en 1956
 - Lisp en 1958
 
-Ambos lenguajes planteaban dos enfoques muy distintos desde el
-principio:
-
-* FORTRAN
-	* Primer lenguaje comercial, equipo de IBM dirigido por John
-      W. Backus
-	* Lenguaje imperativo: estado, estructuras de control, contador de
-      programa, celdas de memoria
-	* Lenguaje compilado
-* Lisp
-	* Lenguaje diseñado en un departamento de investigación, un equipo
-      del MIT dirigido por John McCarthy
-	* Lenguaje funcional: funciones, recursión, listas, símbolos
-	* Lenguaje interpretado
-
+Ambos lenguajes planteaban dos enfoques muy distintos desde el principio y fueron la base y la influencia del desarrollo de numerosos lenguajes posteriores.
 
 Desde 1954 hasta la actualidad se han documentado más de 2.500
-(consultar en [The Language List]).  Entre 1952 y 1972 alrededor de
-200 lenguajes. Una decena fueron realmente siginificativos y tuvieron
-influencia en el desarrollo de lenguajes posteriores.
+(consultar en [The Language List]). 
 
 [The Language List]: http://people.ku.edu/~nkinners/LangList/Extras/langlist.htm
 
@@ -134,6 +111,8 @@ influencia en el desarrollo de lenguajes posteriores.
 <img src="imagenes/genealogia-de-los-lp.png" width="600px"/>
 
 El **lenguaje C** surgió en 1972, derivado de Fortran y Algol. Es el que vamos a estudiar en esta asignatura.
+
+El **lenguaje Python** surgió en 1991, a partir de Lisp y C.
 
 
 ### <a name="1-6"/> 1.6. Compiladores e intérpretes
@@ -171,10 +150,9 @@ Intel no puede ejecutarse en un procesador ARM, como los
 
 *Interpretación*
 
-- Ejemplos: BASIC, Lisp, Scheme, Python, Ruby
+- Ejemplos: Lisp, Python, Ruby
 - No hay diferencia entre el tiempo de compilación y el tiempo de ejecución
-- Mayor flexibilidad: el código se puede construir y ejecutar "on the
-  fly" (funciones lambda o clousures)
+- Mayor flexibilidad
 
 Los lenguajes interpretados suelen proporcionar un *shell* o
 intérprete. Se trata de un entorno interactivo en el que podemos
@@ -187,18 +165,8 @@ que continuamente evaluamos y comprobamos el código que desarrollamos.
 #### Enfoques mixtos
 
 Existen también enfoques mixtos, como el usado por el lenguaje de
-programación Java, en el que se realizan ambos procesos.
+programación Java, en el que se realizan ambos procesos: por un lado, el compilador (`javac`) traduce el código fuente original a un código intermedio binario (multiplataforma), que es interpretado posteriormente por el intérprete (`java`).
 
-En una primera fase el compilador de Java (`javac`) realiza una
-traducción del código fuente original a un _código intermedio_ binario
-independiente del procesado, denominado _bytecode_. Este código
-binario es multiplataforma.
-
-El código intermedio es interpretado después por un el intérprete
-(`java`) que ya sí que es dependiente de la plataforma. En la figura
-el intérprete se denomina _Virtual machine_ (no confundir con el
-concepto de _máquina virtual_ que permite emular un sistema operativo,
-por ejemplo VirtualBox).
 
 <img src="imagenes/maquina-virtual.png" width="500px"/>
 
@@ -207,6 +175,8 @@ por ejemplo VirtualBox).
 - Ejemplos: Java, Scala
 
 ## <a name="2"/> 2. Lenguaje C
+
+C es el lenguaje principal que vamos a estudiar en la asignatura, pero vamos a ver también algunos ejemplos en Python.
 
 C presenta ciertas características que permiten ejercer un elevado control sobre la eficiencia
 de los programas, tanto en la velocidad de ejecución como en el consumo de memoria, pero
@@ -269,8 +239,19 @@ y el resultado es la salida por pantalla:
 
 	Hola mundo!!
 	
+
+#### Diferencias entre C y Python
+
+- C es un lenguaje imperativo. Python es multiparadigma (imperativo, orientado a objetos y funcional).
+- C es un lenguaje compilado. Python es interpretado.
+- En C, el programador tiene que hacer la gestión de memoria (reservar, liberar, etc). Python tiene recolector de basura automático para la gestión de memoria.
+- C es fuertemente tipado (obligatorio declarar el tipo de las variables). Python es débilmente tipado.
+- La sintaxis de C es más compleja. La sintaxis de Python es más sencilla y sus programas son más fáciles de escribir y depurar.
+
 	
 ## <a name="3"/> 3. Aprender a programar
+
+**A programar se aprende programando**. En esta asignatura os daréis cuenta que no sirve de nada memorizar programas, ni mirar ejercicios resueltos o soluciones a las prácticas planteadas. Debéis empezar desde el principio a hacer pequeños programas y modificaciones de los que hagamos o planteemos en clase. Pelearos con el código, que os salgan errores, resolverlos, etc. Es la única forma de aprender. Una vez hayáis implementado una solución a un problema, entonces es el momento de mirar otra solución para ver si podéis mejorarlo, pero primero debéis haberlo resuelto vosotros o al menos intentado resolver.
 
 Un programa de computadora es sólo una recopilación de las instrucciones necesarias para resolver un problema específico. El método utilizado para resolver el problema se conoce como algoritmo. 
 
@@ -282,8 +263,10 @@ Por ejemplo, si queremos implementar un programa que comprueba si un número es 
 2. **Claridad**: Facilidad de lectura del programa en conjunto, con énfasis en la lógica subyacente. 
 3. **Sencillez**: La claridad y la corrección de un programa se suelen ver favorecidos con hacer las cosas de forma tan sencilla como sea posible, consistente con los objetivos del programa en su conjunto
 4. **Eficiencia**: relacionado con la velocidad de ejecución y la utilización eficiente de la memoria
-5. **Modularidad**: Muchos programas se pueden dividir en pequeñas subtareas. Es una buena práctica de programación implementar cada una de estas subtareas como un módulo. En C estos módulos son las funciones. El diseño modular aumenta la corrección y la claridad, y facilita los posibles cambios futuros del programa
+5. **Modularidad**: Casi todos los programas se pueden dividir en pequeñas subtareas. Es una buena práctica de programación implementar cada una de estas subtareas como un módulo. En C estos módulos son las funciones. El diseño modular aumenta la corrección y la claridad, y facilita los posibles cambios futuros del programa
 6. **Generalidad**: Intentaremos que el programa sea lo más genérico posible
+
+Todas estas características las tendremos en cuenta en la evaluación de vuestros programas en la asignatura.
 	
 ### <a name="3-2"/> 3-2. Pasos para desarrollar un programa
 
@@ -394,7 +377,7 @@ Usar lenguaje apropiado. Si tenemos funciones, comentar lo que hace justo antes 
 
 > **Nota**:  En este apartado vamos a hablar de términos que iremos explicando poco a poco en la asignatura. La idea es recopilarlo para que os sirva de guía y de consulta.
 
-Los programas, a lo largo de su vida, se van quedando obsoletos debido a cambios en su entorno, por ejemplo, actualización del software de un robot para una determinada tarea. Un programa pensado para una determinada actividad, es muy normal tener que modificarlo porque cambie dicha actividad o porque decidamos incluirle nuevas posibilidades que antes no estaban previstas. 
+Los programas, a lo largo del tiempo, se van quedando obsoletos, por ejemplo, actualización del software de un robot para una determinada tarea. Es muy normal tener que modificar un programa porque debamos actualizarlo o porque decidamos incluirle nuevas posibilidades que antes no estaban previstas. 
 
 Por otra parte, también es frecuente que uno deba modificar un programa escrito por otro programador, encontrándonos con problemas de legibilidad. Para poder modificarlo, primero hay que comprender su funcionamiento, y para facilitar esta tarea el programa debe estar escrito siguiendo unas normas básicas. 
 
@@ -442,7 +425,7 @@ Por convenio, las constantes se suelen poner completamente en mayúsculas y las 
 
 #### 3. Comentarios
 
-Ya los hemos comentado previamente. Sirven para aumentar la claridad de un programa, ayudan para la documentación y bien utilizados nos pueden ahorrar mucho tiempo.
+Sirven para aumentar la claridad de un programa, ayudan para la documentación y bien utilizados nos pueden ahorrar mucho tiempo.
 
 Los comentarios deben ser breves y concisos. Se deben poner comentarios cuando se crean necesarios, y sobre todo:
 
@@ -500,13 +483,8 @@ int main() {	printf("Ejemplo de identación\n");	return 0;
 ~~~
 
 
-## 4. Bibliografía
-
-* *Programming in C*, *Stephen G. Kochan*
-* Programación en C, *Byron S. Gottfried*
-
 ----
 
-Programación 1, Grado de Robótica, curso 2017-18  
+Programación 1, Grado de Robótica, curso 2018-19  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
