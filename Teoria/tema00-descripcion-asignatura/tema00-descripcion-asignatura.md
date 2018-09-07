@@ -1,7 +1,7 @@
 
 ## Programación 1. Grado de Robótica. Curso 2018-2019
 
-Toda la información está disponible en el [sitio Moodle de P1](https:// ) y en la
+Toda la información está disponible en el [sitio Moodle de P1](https://moodle2018-19.ua.es/moodle/course/view.php?id=1384) y en la
 [ficha del campus virtual](https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wCodEst=C211&wcodasi=33704&wlengua=es&scaca=2018-19#).
 
 
@@ -13,12 +13,12 @@ prácticas de 2 h. a la semana
 
 **Profesores**:  
 
-* Antonio Botía ([e-mail](mailto:abotia@dccia.ua.es)): Grupos de prácticas: 1 y 4.
+* Antonio Botía ([e-mail](mailto:abotia@ua.es)): Grupos de prácticas: 1 y 4.
 * Cristina Pomares ([e-mail](mailto:cpomares@ua.es)): Grupo de teoría: 1. Grupos de prácticas: 2 y 3.
 
 ### Recursos de la asignatura
 
-* [Sitio Moodle](https://moodle2018-19.ua.es/moodle/course/view.php?id=1384 ) contiene los
+* [Sitio Moodle](https://moodle2018-19.ua.es/moodle/course/view.php?id=1384) contiene los
   apuntes, transparencias, prácticas y otros materiales docentes
 * [Foro de consultas y anuncios](https://moodle2018-19.ua.es/moodle/mod/forum/view.php?id=10141)
   en el sitio Moodle
