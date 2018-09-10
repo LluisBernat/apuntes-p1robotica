@@ -493,7 +493,7 @@ int main() {	printf("Ejemplo de identación\n");	return 0;
 
 **IMPORTANTE**: No programas para el ordenador, programas para ti. Programar no es escribir código y olvidarlo, sino mantenerlo.
 
-Puedes echarle un vistazo a este divertido [enlace](http://www.agustincernuda.info/noprog_ESP.html) donde se explica de forma qué no debes hacer cuando implementas un programa.
+Puedes echarle un vistazo a este divertido [enlace](http://www.agustincernuda.info/noprog_ESP.html) donde explican qué no debes hacer cuando implementas un programa.
 
 ----
 
