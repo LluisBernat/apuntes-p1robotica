@@ -33,7 +33,7 @@ Por ejemplo, en un programa que calcula la longitud de una circunferencia ( Dia�
 - Dato de salida: longitud de la circunferencia
 - Datos internos: diámetro de la circunferencia, que toma como valor 2*radio de la circunferencia
 
-El lenguaje C es **fuertemente tipeado**, eso significa que tenemos que asignar explícitamente un tipo a cada dato. El tipo de un dato es el conjunto de valores que puede tomar durante el programa.
+El lenguaje C es **fuertemente tipado**, eso significa que tenemos que asignar explícitamente un tipo a cada dato. El tipo de un dato es el conjunto de valores que puede tomar durante el programa.
 
  La asignación de tipos a los datos tiene cuatro objetivos principales:
 
@@ -53,7 +53,7 @@ Ocupan un tamaño fijo en memoria, es decir, su tamaño no puede variar durante 
 
 **Tipos dinámicos**
 
-También llamados *punteros*, los veremos más adelante. Un puntero no define un tipo determinado, sino que apunta a una dirección de memoria
+También llamados *punteros*, los veremos más adelante. Un puntero no define un tipo determinado, sino que apunta a una dirección de memoria. Podemos reservar un tamaño determinado de memoria, ampliarlo, reducirlo y liberarlo.
 
 **Tipos simples**
 
@@ -179,7 +179,21 @@ const double cambioEuroPesetas = 166.386;
 
 Diferencias entre `#define`y `const`:
 
-- `#define` afecta durante el proceso de pre-procesado, antes de la compilación(donde p.e., se eliminan los comentarios).- `const` permite indicar de forma explícita el tipo de la constante
+- `#define` afecta durante el proceso de pre-procesado, antes de la compilación (donde p.e., se eliminan los comentarios).- `const` permite indicar de forma explícita el tipo de la constante
+
+**Variables y constantes en Python**
+
+En C (lenguaje imperativo) hemos visto que las variables se pueden entender como "cajas" o zonas de memoria en las que se guardan los datos. Pero en Python (lenguaje orientado a objetos) las variables son "etiquetas" que permiten hacer referencia a los datos (objetos).
+
+En C hemos visto que para definir una variable es necesario que antes de utilizar esa variable se defina el tipo de información que va a contener (C es un lenguaje fuertemente tipado). En Python (lenguaje débilmente tipado), es el intérprete del lenguaje el que decide el tipo de variable a utilizar en el momento que se guarda la información. 
+
+Definimos variables en Python:
+
+~~~c
+>>> a = 3
+>>> nombre = "hola"
+>>> precio = 30.95
+~~~
 
 ## <a name="4"/> 4. Tipos de datos simples
 
@@ -392,7 +406,7 @@ Precedencia | Operador  | Asociatividad
 
 ### <a name="4-5"/> 4.5. Enumerados
 
-Un tipo enumerado permite definir un conjunto de constantes simbólicas con valor entero. Limita los posibles valores a los expresados explícitamente a través de una lista. Cada valor de la enumeración se asocia internamente a un número entero, comenzando por 0 y aumentando de 1 en 1.~~~cenum calificacion{suspenso, aprobado, notable, sobresaliente, matricula };
+Un tipo enumerado permite definir un conjunto de constantes simbólicas con valor entero. Limita los posibles valores a los expresados explícitamente a través de una lista. Cada valor de la enumeración se asocia internamente a un número entero, comenzando por 0 y aumentando de 1 en 1.~~~cenum calificacion {suspenso, aprobado, notable, sobresaliente, matricula };
 ~~~
 
 ~~~c
@@ -404,19 +418,19 @@ int main()
       viernes, sabado, domingo};
    enum DiasSemana dia; // variable tipo enum
    dia = lunes;
-   printf ("Primer dÌa de la semana: %d\n", dia); //0
+   printf ("Primer día de la semana: %d\n", dia); //0
    dia = martes;
-   printf ("Segundo dÌa de la semana: %d\n", dia); //1
+   printf ("Segundo día de la semana: %d\n", dia); //1
    dia = miercoles;
-   printf ("Tercer dÌa de la semana: %d\n", dia); //2
+   printf ("Tercer día de la semana: %d\n", dia); //2
    dia = jueves;
-   printf ("Cuarto dÌa de la semana: %d\n", dia); //3
+   printf ("Cuarto día de la semana: %d\n", dia); //3
    dia = viernes;
-   printf ("Quinto dÌa de la semana: %d\n", dia); //4
+   printf ("Quinto día de la semana: %d\n", dia); //4
    dia = sabado;
-   printf ("Sexto dÌa de la semana: %d\n", dia); //5
+   printf ("Sexto día de la semana: %d\n", dia); //5
    dia = domingo;
-   printf ("Ultimo dÌa de la semana: %d\n", dia); //6
+   printf ("Ultimo día de la semana: %d\n", dia); //6
 }
 ~~~
 
@@ -625,51 +639,20 @@ c = a
 
 El `scanf` funciona mediante un buffer. Cuando tecleamos cualquier valor en el teclado y pulsamos 'intro', el `\n` también es un carácter ASCII y se queda almacenado en el buffer. De forma que si lo que leemos a continuación es otro carácter, se recoge el `\n` que estaba en el buffer y se salta a la siguiente instrucción. Esto no sucede si lo que leemos es un entero u otro tipo de dato.
 
-Para solucionarlo, tendríamos que quitar del buffer el `\n` antes de leer cualquier carácter. Lo podemos hacer de varias formas:
-
-- La forma más sencilla consiste en poner un `\n` en el `scanf` antes del `%c`:
+Para solucionarlo, tenemos que quitar del buffer el `\n` antes de leer cualquier carácter. La forma más sencilla consiste en poner un `\n` en el `scanf` antes del `%c` (sólo cuando se lean caracteres):
 
 ~~~c
 scanf("\n%c", &c);
 ~~~
 
-- Otra forma consiste en usar la siguiente función definida por nosotros, que vacía el buffer:
+### Tipos de datos en Python
 
-~~~c
-void limpiarBuffer() {
-   while (getchar() != '\n');
-}
-~~~
+Ya vimos en el tema anterior que Python es un lenguaje débilmente tipado. Eso significa que cuando definimos una variable no tenemos que indicar de qué tipo es el dato que va almacenar, porque el intérprete lo puede inferir, pero internamente sí que se trabaja con tipos datos. En Python, para saber de qué tipo es una variable tenemos la instrucción `type`. 
 
-Modificamos ahora el programa anterior llamando a la función antes de leer el `char`:
-
-~~~c
-void limpiarBuffer() {
-   while (getchar() != '\n');
-}
-
-int main()
-{
-   char c;
-
-   printf("letra 1:\n");
-   scanf("%c", &c);
-   printf("c = %c\n", c);
-
-   printf("letra 2:\n");
-   limpiarBuffer();
-   scanf("%c", &c);
-   printf("c = %c\n", c);
-
-   printf("letra 3:\n");
-   limpiarBuffer();
-   scanf("%c", &c);
-   printf("c = %c\n", c);
-
-}
+Los tipos de datos que encontramos en Python son muy similares a los de C (pero siempre son objetos): enteros, decimales, complejos, cadenas, etc. También incluye otros como tuplas, listas, diccionarios, etc.
 
 ----
 
-Programación 1, Grado de Robótica, curso 2017-18  
+Programación 1, Grado de Robótica, curso 2018-19  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig

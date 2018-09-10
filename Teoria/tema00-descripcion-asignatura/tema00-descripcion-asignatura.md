@@ -54,15 +54,15 @@ prácticas de 2 h. a la semana
 
 * **Tema 4. Programación modular**: Descomposición modular. Concepto de módulo. Comunicación entre módulos. Funciones. Parámetros actuales y formales. Paso de parámetros por valor y por referencia. Ámbito de una variable. Variables globales y locales. Efecto lateral. Funciones predefinidas
 
-* **Tema 5. Recursión**: Definición. Esquema básico. Codificación en C. Características
+* **Tema 5. Tipos de datos estructurados: Arrays**: Concepto de dato estructurado. El tipo array. Arrays unidimensionales, bidimensionales y multidimensionales. Cadenas de caracteres
 
-* **Tema 6. Tipos de datos estructurados: Arrays**: Concepto de dato estructurado. El tipo array. Arrays unidimensionales, bidimensionales y multidimensionales. Cadenas de caracteres
+* **Tema 6. Punteros y memoria dinámica**: Memoria estática vs. dinámica. Creación, inicialización, asignación y liberación de memoria. Conversión de tipos.
 
-* **Tema 7. Punteros y memoria dinámica**: Memoria estática vs. dinámica. Creación, inicialización, asignación y liberación de memoria. Conversión de tipos.
+* **Tema 7. Tipos de datos estructurados: Registros**: Concepto de registro. Registros en C. Operaciones sobre registros. Arrays de registro
 
-* **Tema 8. Tipos de datos estructurados: Registros**: Concepto de registro. Registros en C. Operaciones sobre registros. Arrays de registro
+* **Tema 8. Entrada/salida**: Declaración, apertura, lectura y escritura de ficheros de texto y binarios en C.
 
-* **Tema 9. Entrada/salida**: Declaración, apertura, lectura y escritura de ficheros de texto y binarios en C.
+* **Tema 9. Recursión**: Definición. Esquema básico. Codificación en C. Características
 
 
 ### Prácticas
