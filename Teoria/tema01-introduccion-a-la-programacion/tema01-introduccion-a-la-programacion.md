@@ -201,6 +201,18 @@ el programa traductor puede dedicar más tiempo a intentar encontrar la mejor tr
 posible, la que proporcione el programa de código máquina más rápido (o que consuma
 menos memoria).
 
+### Desarrollo de programas en lenguaje C
+
+Cuando se implementa un programa, en primer lugar editamos el **código fuente** con un editor. Estos archivos contienen la implementación del programa en un determinado lenguaje, pero no se pueden ejecutar directamente. Para ello necesitamos **compilar** los programas oara obtener el **código objeto**, que es un código en binario intermedio que puede enlazarse con otros móulos ya compilados o con bibliotecas para obtener un **código ejecutable**. Este último es un fichero que se puede ejecutar directamente.
+
+Este proceso es un ciclo, de forma que si después de ejecutar el programa hemos encontrado errores, volvemos a editar el programa, compilarlo y ejecutarlo.
+
+**Compilador**: un programa que lee un código fuente y lo traduce a código objeto (ensamblador o binario).
+
+**Enlazador**: combina archivos objeto y bibliotecas de forma que se puedan ejecutar en una sola unidad.
+
+
+
 Ejemplo de programa en C:
 
 ~~~c
@@ -220,12 +232,12 @@ Todas las instrucciones en C terminan en un `;`.
 
 La última sentencia `return 0;`indica que se termina la ejecución de `main`, y devuelve al sistema el valor 0. El cero es un valor que se usa para indicar que el programa ha terminado correctamente (sin errores). La devolución de un número distinto de cero indican distintos errores (por ejemplo que no se encuentra un fichero).
 
-Vamos a compilar y ejecutar nuestro primer programa. La compilación se produce en tres pasos:
+Vamos a compilar y ejecutar nuestro primer programa. Son tres pasos:
 1. A partir del fichero de texto con nuestro programa con el código fuente en lenguaje C se realiza una fase de preprocesado en la que se eliminan comentarios y se satisfacen directivas # `gcc -­E holamundo.c`
 2. Una vez preprocesado se genera un fichero con código objeto en el paso de compilación `gcc -­c holaMundo.c`. Nos genera `holaMundo.o`
 3. El fichero objeto se debe enlazar con las librerías para generar el ejecutable en el paso de enlazado. Esto se puede realizar con una instrucción: `gcc holaMundo.c ­-o holaMundo`
 
-Su forma de uso más básica es ésta:
+Su forma de uso más básica es ésta (agrupamos los pasos anteriores en una única instrucción):
 
 `gcc -o holamundo holamundo.c`
 
@@ -238,7 +250,6 @@ Ahora ejecutamos el fichero ejecutable:
 y el resultado es la salida por pantalla:
 
 	Hola mundo!!
-
 
 #### Diferencias entre C y Python
 
@@ -268,7 +279,7 @@ Por ejemplo, si queremos implementar un programa que comprueba si un número es 
 
 Todas estas características las tendremos en cuenta en la evaluación de vuestros programas en la asignatura.
 
-### <a name="3-2"/> 3-2. Pasos para desarrollar un programa
+### <a name="3-2"/> 3.2 Pasos para desarrollar un programa
 
 Es fundamental comprender bien el problema antes de pensar en la solución. Antes de ponerse a escribir el programa (implementación) es necesario tener claro cómo resolverlo
 
@@ -478,7 +489,9 @@ else {
 ~~~
 
 ~~~c
-int main() {	printf("Ejemplo de identación\n");	return 0;
+int main() {
+   printf("Ejemplo de identación\n");
+   return 0;
 }
 ~~~
 
