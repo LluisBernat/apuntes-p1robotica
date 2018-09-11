@@ -71,7 +71,6 @@ Durante las clases prácticas se realizarán de forma **individual** ejercicios 
 
 Durante todo el curso se realizará una práctica relacionada con la robótica. El desarrollo será de forma incremental semana a semana, donde se irá construyendo paso a paso una solución parcial hasta llegar a la implementación final.
 
-
 ### Horarios
 
 La distribución de grupos del curso 2018-19 es la siguiente:
@@ -125,7 +124,8 @@ Los apuntes de la asignatura se han confeccionado utilizando la siguiente biblio
 
 * GOTTFRIED, Byron S., et al. Programación en C. McGraw-Hill, 1991. ISBN: 9788448110680
 
-
+<img src="imagenes/carballeira-cover2.jpg" width="170px"/>
+* Carballeira. Problemas resueltos de programación en lenguaje C
 ----
 
 Programación 1, Grado de Robótica, curso 2018-19  
