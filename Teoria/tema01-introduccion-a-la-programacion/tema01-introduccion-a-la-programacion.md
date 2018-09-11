@@ -281,10 +281,13 @@ Todas estas características las tendremos en cuenta en la evaluación de vuestr
 
 ### <a name="3-2"/> 3.2 Pasos para desarrollar un programa
 
-Es fundamental comprender bien el problema antes de pensar en la solución. Antes de ponerse a escribir el programa (implementación) es necesario tener claro cómo resolverlo
+Es fundamental comprender bien el problema antes de pensar en la solución. Antes de ponerse a escribir el programa es necesario tener claro cómo resolverlo, pensar en ello utilizando lápiz y papel:
 
-1. Entender el problema2. Diseñar la solución3. Desarrollar (implementar) el programa
-4. Verificar y probar el programa5. Documentar
+1. Entender el problema
+2. Diseñar la solución
+3. Implementar el programa
+4. Verificar y probar el programa
+5. Optimizar
 
 #### Entender el problema
 
@@ -362,12 +365,16 @@ int main() {
 }
 ~~~
 
-#### Verificar el programa
+#### Probar el programa
 
 - Comprobar que el resultado obtenido es el adecuado. Para ello se deben realizar pruebas exhaustivas sobre nuestro programa y testear que los resultados obtenidos son los que esperamos
 - Si no, volver al paso anterior
 
 <img src="imagenes/depuracion.png" width="400px"/>
+
+#### Optimización
+
+Después de tener un programa correcto y validado, es conveniente estudiar si se puede mejorar la solución para que el programa sea más eficiente, más legible y menos redundante.
 
 #### Documentación
 
