@@ -27,6 +27,8 @@ Los elementos básicos de los que consta un programa son:
 
 Los *datos* son los elementos que manipulan los programas. Para almacenar datos necesitamos zonas de memoria del ordenador. La memoria del ordenador está dividida en casillas numeradas en las que se guardan los datos. Los lenguajes de programación nos permiten asignar nombres simbólicos a estas celdillas y controlar qué zonas de memoria están libres y ocupadas.
 
+El programador únicamente tiene que indicarle al ordenador el nombre de las zonas de memoria donde se quiere almacenar la información y de qué tipo es son los datos. A estas zonas de memoria les llamaremos **variables**.
+
 En un programa podemos distinguir entre:
 
 - datos de entrada / salida: usados como punto de partida o resultado
