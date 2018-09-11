@@ -19,7 +19,13 @@
 	- [5-2. Entrada `scanf`](#5-2)
 
 ## <a name="1"/> 1. Tipos de datos
-Los *datos* son los elementos que manipulan los programas.
+
+Los elementos básicos de los que consta un programa son:
+
+- los datos
+- las instrucciones que los procesan
+
+Los *datos* son los elementos que manipulan los programas. Para almacenar datos necesitamos zonas de memoria del ordenador. La memoria del ordenador está dividida en casillas numeradas en las que se guardan los datos. Los lenguajes de programación nos permiten asignar nombres simbólicos a estas celdillas y controlar qué zonas de memoria están libres y ocupadas.
 
 En un programa podemos distinguir entre:
 
@@ -185,7 +191,7 @@ Diferencias entre `#define`y `const`:
 
 En C (lenguaje imperativo) hemos visto que las variables se pueden entender como "cajas" o zonas de memoria en las que se guardan los datos. Pero en Python (lenguaje orientado a objetos) las variables son "etiquetas" que permiten hacer referencia a los datos (objetos).
 
-En C hemos visto que para definir una variable es necesario que antes de utilizar esa variable se defina el tipo de información que va a contener (C es un lenguaje fuertemente tipado). En Python (lenguaje débilmente tipado), es el intérprete del lenguaje el que decide el tipo de variable a utilizar en el momento que se guarda la información. 
+En C hemos visto que para definir una variable es necesario que antes de utilizar esa variable se defina el tipo de información que va a contener (C es un lenguaje fuertemente tipado). En Python (lenguaje débilmente tipado), es el intérprete del lenguaje el que decide el tipo de variable a utilizar en el momento que se guarda la información.
 
 Definimos variables en Python:
 
@@ -647,7 +653,7 @@ scanf("\n%c", &c);
 
 ### Tipos de datos en Python
 
-Ya vimos en el tema anterior que Python es un lenguaje débilmente tipado. Eso significa que cuando definimos una variable no tenemos que indicar de qué tipo es el dato que va almacenar, porque el intérprete lo puede inferir, pero internamente sí que se trabaja con tipos datos. En Python, para saber de qué tipo es una variable tenemos la instrucción `type`. 
+Ya vimos en el tema anterior que Python es un lenguaje débilmente tipado. Eso significa que cuando definimos una variable no tenemos que indicar de qué tipo es el dato que va almacenar, porque el intérprete lo puede inferir, pero internamente sí que se trabaja con tipos datos. En Python, para saber de qué tipo es una variable tenemos la instrucción `type`.
 
 Los tipos de datos que encontramos en Python son muy similares a los de C (pero siempre son objetos): enteros, decimales, complejos, cadenas, etc. También incluye otros como tuplas, listas, diccionarios, etc.
 
