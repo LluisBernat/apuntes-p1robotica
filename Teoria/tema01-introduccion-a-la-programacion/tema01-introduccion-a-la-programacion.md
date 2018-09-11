@@ -478,7 +478,7 @@ Este orden no es estricto y pueden cambiarse algunos puntos por otros, pero debe
 
 La indentación o sangrado consiste en tabular hacia la derecha todas las sentencias de una misma función o bloque, de forma que se vea rápidamente cuales pertenecen al bloque y cuales no.
 
-Algunos estudios indican que el indentado debe hacerse con 2, 3 ó 4 espacios. Usar más espacios no aumenta la claridad y puede originar que las líneas se salgan de la pantalla, complicando su lectura. La indentación es muy importante para que el programador no pierda la estructura del programa debido a los posibles anidamientos.
+Algunos estudios indican que el indentado debe hacerse con 3 ó 4 espacios. Usar más espacios no aumenta la claridad y puede originar que las líneas se salgan de la pantalla, complicando su lectura. La indentación es muy importante para que el programador no pierda la estructura del programa debido a los posibles anidamientos.
 
 Normalmente, la llave de comienzo de una estructura de control `{` se pone al final de la linea y la que lo cierra `}` justo debajo de donde comienza (como veremos más adelante). Ejemplo:
 
