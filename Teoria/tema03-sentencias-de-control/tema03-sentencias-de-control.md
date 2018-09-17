@@ -204,7 +204,7 @@ instruccion_c;
 
 <img src="imagenes/if-else.png" width="600px"/>
 
-###<a name="2-3"/> 2.3  Sentencias `if` anidadas
+### <a name="2-3"/> 2.3  Sentencias `if` anidadas
 
 Podemos anidar condiciones usando la combinación `else if`:
 
@@ -228,30 +228,30 @@ Las estructuras de control de flujo condicionales, se definen mediante el uso de
 Veamos su sintaxis con algunos ejemplos:
 
 ~~~python
-if semaforo == verde: 
+if semaforo == verde:
     print "Cruzar la calle"
-else: 
+else:
     print "Esperar"
 ~~~
 
 ~~~python
-if compra <= 100: 
-    print "Pago en efectivo" 
-elif compra > 100 and compra < 300: 
-    print "Pago con tarjeta de débito" 
-else: 
+if compra <= 100:
+    print "Pago en efectivo"
+elif compra > 100 and compra < 300:
+    print "Pago con tarjeta de débito"
+else:
     print "Pago con tarjeta de crédito"
 ~~~
 
 ~~~python
-importe_a_pagar = total_compra 
-if total_compra > 100: 
-    tasa_descuento = 10 
-    importe_descuento = total_compra * tasa_descuento / 100 
+importe_a_pagar = total_compra
+if total_compra > 100:
+    tasa_descuento = 10
+    importe_descuento = total_compra * tasa_descuento / 100
     importe_a_pagar = total_compra – importe_descuento
 ~~~
 
-###<a name="2-4"/> 2.4  Operador `?`
+### <a name="2-4"/> 2.4  Operador `?`
 
 Es una herramienta útil para evaluar expresiones condicionales de forma abreviada.
 
@@ -279,7 +279,7 @@ es equivalente a: if (b<0) a = -b; else a = b;
 */
 ~~~
 
-###<a name="2-5"/> 2.5  Sentencias `switch`
+### <a name="2-5"/> 2.5  Sentencias `switch`
 
 La sentencia `switch`permite seleccionar entre múltiples opciones.
 
@@ -363,7 +363,7 @@ enum paloPoker miCarta = pica;switch (miCarta) {
 }
 ~~~
 
-###<a name="2-6"/> 2.6  Ejercicios
+### <a name="2-6"/> 2.6  Ejercicios
 
 1. Escribe un programa que pida dos números por teclado y nos indique cual es el mayor, cual es el menor o si son iguales.
 2. Escribe un programa que pida dos número por teclado y nos diga si uno es múltiplo del otro (divisible).
@@ -373,7 +373,7 @@ enum paloPoker miCarta = pica;switch (miCarta) {
 6. Escribe un programa que calcule el índice de masa corporal IMC de una persona. Se debe introducir el peso en kg y la altura en m. El IMC = peso / (altura * altura). El programa muestra por pantalla el tipo de peso:
 	- IMC < 18.0 --> "Inferior al normal"
 	- 18.1 - 24.9 --> "Normal"
-	- 25.0 - 29.9 --> "Sobrepeso"	
+	- 25.0 - 29.9 --> "Sobrepeso"
 	- IMC > 30.0 --> "Obesidad"
 7. Escribe un programa que solicite al usuario una letra (mayúscula o minúscula) e indique si es una vocal o una consonante.
 
@@ -394,7 +394,7 @@ Se pueden agrupar en dos tipos, dependiendo si conocemos de antemano el número 
 - Bucles **determinados**: Sabemos a priori el número de veces que se repetirá el bucle. Es el caso del bucle `for`
 - Bucles **indeterminados**: No sabemos de antemano cuántas iteraciones se realizarán. Es el caso de los bucles `while`y `do-while`
 
-###<a name="3-1"/> 3.1  Bucle `while`
+### <a name="3-1"/> 3.1  Bucle `while`
 
 Permite repetir **cero** o más veces la ejecución de una secuencia de sentencias mientras la condición sea verdadera.
 
@@ -549,7 +549,7 @@ Ejercicio:
 
 Implementa un programa que lea números que el usuario introduzca por teclado hasta que introduzca el cero. El programa tiene que imprimir la suma de todos los números introducidos y el número de números que se han introducido.
 
-###<a name="3-4"/> 3.4. Ejemplos de bucles
+### <a name="3-4"/> 3.4. Ejemplos de bucles
 
 Ejemplo con bucle `while`. Utilizamos el bucle indeterminado `while`porque no sabemos de antemano el número de iteraciones: el bucle terminará cuando el usuario introduzca un cero.
 
@@ -865,7 +865,7 @@ int main(){
 
 ---
 
-##<a name="6"/> 6.  Ejercicios propuestos
+## <a name="6"/> 6.  Ejercicios propuestos
 
 1. Escribe un programa que muestre todos los multiplos de un número dado en el rango [0, 100] – Pedir el número por teclado2. Escribe un programa que muestre todos los divisores de un número dado
 	– Pedir el número por consola	– Uso del operando módulo %3. Hacer las trazas de los ejercicios 1 (valor de entrada 40) y 2 (valor de entrada 16)
