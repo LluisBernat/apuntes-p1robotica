@@ -10,6 +10,7 @@
 	- [2-3. Sentencias `if`anidadas](#2-3)
 	- [2-4. Operador `?`](#2-4)
 	- [2-5. Sentencias `switch`](#2-5)
+	- [2-6. Ejercicios](#2-6)
 - [3. Estructuras de iteración](#3)
 	- [3-1. Bucle `while`](#3-1)  
 	- [3-2. Bucle `do-while`](#3-2)
@@ -33,7 +34,7 @@ double area = base * altura / 2.0;
 printf("El area de un triángulo de base %d y altura %d es %g\n", base, altura, area);
 ~~~
 
-En un determinado instante, el **estado de un programa** queda definido por el valor que tienen sus variables. El estado de un programa es dinámico, y puede cambiar con la ejecución de sentencias dentro del mismo. Es **imprescindible realizar las sentencias adecuadas en el orden adecuado**.
+En un determinado instante, el **estado de un programa** queda definido por el valor que tienen sus variables en ese momento. El estado de un programa es dinámico, y puede cambiar con la ejecución de sentencias dentro del mismo. Es **imprescindible realizar las sentencias adecuadas en el orden adecuado**.
 
 ## <a name="2"/> 2. Sentencias de control
 
@@ -66,7 +67,7 @@ condición.
 
 Permiten que el programa determine las sentencias a ejecutar en base a determinadas **condiciones**.
 
-Las condiciones se presentan como operadores relacionales, integrando como operandos valores, variables o constantes.
+Las condiciones se presentan como operadores relacionales (condiciones booleanas), integrando como operandos valores, variables o constantes.
 
 Suponen una **bifurcación** en la secuencia de ejecución de las instrucciones de un programa
 
@@ -220,6 +221,36 @@ Diagrama sentencia `if anidada`:
 
 <img src="imagenes/if-anidado.png" width="600px"/>
 
+#### Sentencias condicionales en Python
+
+Las estructuras de control de flujo condicionales, se definen mediante el uso de tres palabras claves reservadas, del lenguaje: `if` , `elif` (como el `else-if`de C) y `else`.
+
+Veamos su sintaxis con algunos ejemplos:
+
+~~~python
+if semaforo == verde: 
+    print "Cruzar la calle"
+else: 
+    print "Esperar"
+~~~
+
+~~~python
+if compra <= 100: 
+    print "Pago en efectivo" 
+elif compra > 100 and compra < 300: 
+    print "Pago con tarjeta de débito" 
+else: 
+    print "Pago con tarjeta de crédito"
+~~~
+
+~~~python
+importe_a_pagar = total_compra 
+if total_compra > 100: 
+    tasa_descuento = 10 
+    importe_descuento = total_compra * tasa_descuento / 100 
+    importe_a_pagar = total_compra – importe_descuento
+~~~
+
 ###<a name="2-4"/> 2.4  Operador `?`
 
 Es una herramienta útil para evaluar expresiones condicionales de forma abreviada.
@@ -283,17 +314,17 @@ Ejemplo sentencia `switch-case`:
 int numHermanos = 6; // Prueba a usar 0,1,2,3,4 ...
 
 switch (numHermanos) {
-   case 0:       
-      printf("Hijo/a único\n");       
+   case 0:      
+      printf("Hijo/a único\n");
       break;
-   case 1:       
-      printf("Pareja \n");       
+   case 1:
+      printf("Pareja \n");
       break;
-   case 2:       
-      printf("Familia numerosa \n");       
-      break;   
+   case 2:
+      printf("Familia numerosa \n");
+      break;
    default :
-   	printf("Familia muy numerosa \n");
+   	  printf("Familia muy numerosa \n");
 }
 ~~~
 
@@ -314,9 +345,7 @@ Ejemplo de enumeraciones y `switch`:
 
 ~~~c
 enum paloPoker{pica, corazon, trebol, diamante };
-enum paloPoker miCarta = pica;
-
-switch (miCarta) {
+enum paloPoker miCarta = pica;switch (miCarta) {
    case diamante:
       printf("Diamante \n");
       break;
@@ -333,6 +362,20 @@ enum paloPoker miCarta = pica;
       printf("La carta no es de poker \n");
 }
 ~~~
+
+###<a name="2-6"/> 2.6  Ejercicios
+
+1. Escribe un programa que pida dos números por teclado y nos indique cual es el mayor, cual es el menor o si son iguales.
+2. Escribe un programa que pida dos número por teclado y nos diga si uno es múltiplo del otro (divisible).
+3. Escribe un programa que pida tres números por teclado y nos diga cuál es el menor.
+4. Escribe un programa que pida una nota de 0 a 10 y la muestre en forma de texto: "Suspenso", "Aprobado", "Notable", "Sobresaliente".
+5. Escribe un programa que pida dos números por teclado y una de las cuatro operaciones aritméticas de una calculadora (+, -, *, /). Devuelve el resultado de la operación aplicada a los dos números.
+6. Escribe un programa que calcule el índice de masa corporal IMC de una persona. Se debe introducir el peso en kg y la altura en m. El IMC = peso / (altura * altura). El programa muestra por pantalla el tipo de peso:
+	- IMC < 18.0 --> "Inferior al normal"
+	- 18.1 - 24.9 --> "Normal"
+	- 25.0 - 29.9 --> "Sobrepeso"	
+	- IMC > 30.0 --> "Obesidad"
+7. Escribe un programa que solicite al usuario una letra (mayúscula o minúscula) e indique si es una vocal o una consonante.
 
 ___
 
@@ -780,7 +823,7 @@ int main(){
             scanf("%d", &n);
             res = 0;
             for(aux = n;aux >= 1;aux--)
-            res += aux;
+               res += aux;
             printf("El sumatorio es: %.0lf\n\n\n", res);
             break;
 
@@ -789,7 +832,7 @@ int main(){
             scanf("%d", &n);
             res = 1;
             for(aux = n;aux >= 1;aux--)
-            res *= aux;
+               res *= aux;
             printf("El factorial es: %.0lf\n\n\n", res);
             break;
       }
