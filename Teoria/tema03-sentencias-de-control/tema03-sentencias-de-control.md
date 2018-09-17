@@ -439,7 +439,7 @@ while (res == 'S' || res == 's') {
 printf("Te he dado %d caramelos\n", caramelos);
 ~~~
 
-###<a name="3-2"/> 3.2.  Bucle `do-while`
+### <a name="3-2"/> 3.2.  Bucle `do-while`
 
 Permite repetir **una** o más veces la ejecución de una secuencia de sentencias mientras la condición sea verdadera.
 
@@ -472,7 +472,7 @@ printf("La suma de todos los números introducidos es: %d\n", suma);
 
 Al situarse la condición se sitúa al final, la `secuencia_de_instrucciones` se ejecuta al menos una vez.
 
-###<a name="3-3"/> 3.3. Bucle `for`
+### <a name="3-3"/> 3.3. Bucle `for`
 
 Permite repetir un número determinado de veces la ejecución de una secuencia de instrucciones. El número de iteraciones del bucle es controlado por una variable usada como un **contador**.
 
@@ -700,7 +700,7 @@ Iteración | dia | capacidadActual
 6   | 6   | 15 + 6 = **21**
 
 ---
-##<a name="5"/> 5.  Ejercicios resueltos
+## <a name="5"/> 5.  Ejercicios resueltos
 
 #### Ejercicio 1
 Escribe un programa que lea cantidades y precios y al final indique el total de la factura. Primero se pregunta la cantidad vendida, tras lo cual el usuario introducirá un número entero positivo.Después se pregunta el precio que será un número decimal positivo. La lectura termina cuando en la cantidad se introduzca un cero. Si es así se escribirá el total.
