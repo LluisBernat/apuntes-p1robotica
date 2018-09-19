@@ -243,7 +243,7 @@ Una forma de comprobar el tamaño que ocupa cada tipo en memoria es usar el oper
 * bytes. */
 
 #include <stdio.h>
-int main(void)
+int main()
 {
 
    printf("Un int ocupa %d bytes\n", sizeof(int));
@@ -355,7 +355,7 @@ Guía operaciones lógicas:
 
 ~~~c
 /* Algunas operaciones lógicas */
-int main(void)
+int main()
 {
    printf("Operaciones lógicas:");
    printf("!true es %d\n", !true);
@@ -374,7 +374,7 @@ Ejemplo del tamaño de tipos de datos simples:
 #include <stdio.h>
 #include <limits.h>
 
-int main(void)
+int main()
 {
    printf("\n número de bits por char: %d", CHAR_BIT);
    printf("\n mínimo valor para un signed char: %d", SCHAR_MIN);
@@ -404,13 +404,8 @@ Precedencia | Operador  | Asociatividad
 4	| >	 | izq. a derecha
 5	| >=	| izq. a derecha
 6	| == !=	| izq. a derecha
-7	| &	 | izq. a derecha
-8	| ^ |	izq. a derecha
-9	| \|	| izq. a derecha
-10	| &&	| izq. a derecha
-11	| \|\|	 | izq. a derecha
-12	| ?:	| derecha a izq.
-13	| = += -= *= etc	| derecha a izq.
+7	| &&	| izq. a derecha
+8	| = += -= *= etc	| derecha a izq.
 
 ### <a name="4-5"/> 4.5. Enumerados
 
