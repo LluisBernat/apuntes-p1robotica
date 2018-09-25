@@ -363,6 +363,33 @@ enum paloPoker miCarta = pica;switch (miCarta) {
 }
 ~~~
 
+Ejemplo con caracteres (internamente se almacenan con un valor entero, su valor ASCII):
+
+~~~c
+    char letra;
+    printf("Introduzca una letra: "); 
+    scanf("%c", &letra); 
+    switch(letra) {
+        case 'a': 
+            printf("Se ha pulsado una a.");
+            break;
+        case 'e': 
+            printf("Se ha pulsado una a.");
+            break;
+        case 'i': 
+            printf("Se ha pulsado una a.");
+            break;
+        case 'o': 
+            printf("Se ha pulsado una a.");
+            break;
+        case 'u': 
+            printf("Se ha pulsado una a.");
+            break;
+        default: 
+            printf("Otro carácter");
+    }
+~~~
+
 ### <a name="2-6"/> 2.6  Ejercicios
 
 1. Escribe un programa que pida dos números por teclado y nos indique cual es el mayor, cual es el menor o si son iguales.
@@ -549,7 +576,45 @@ Ejercicio:
 
 Implementa un programa que lea números que el usuario introduzca por teclado hasta que introduzca el cero. El programa tiene que imprimir la suma de todos los números introducidos y el número de números que se han introducido.
 
-### <a name="3-4"/> 3.4. Ejemplos de bucles
+### Validación de datos
+
+Cuando estamos desarrollando un programa es frecuente que nos pidan por teclado un número que esté en un rango determinado (por ejemplo entre 1 y 10) o que nos pidan unos determinados caracteres (por ejemplo 's' o 'n'). Normalmente en estos casos, si el dato introducido no es válido, se tiene que volver a solicitar un nuevo dato hasta que sea correcto. Para ello utilizamos bucles que pidan repetidamente el dato mientras no sea correcto.
+
+Por ejemplo, nos piden un número par. Si no es par, se tiene que volver a pedir:
+
+~~~c
+int num;
+
+do {
+   printf("Introduce un número par: ");
+   scanf("%d", num);
+}while(num % 2 != 0);  //repetir mientras no sea par
+
+~~~
+
+#### Bucles en Python
+
+**Bucle while en Python** 
+
+~~~python
+num = 1
+while num <= 10:
+    print "El número es: ", num
+    num = num + 1
+~~~
+    
+**Bucle for en Python**
+
+Ejemplo que itera sobre una lista:
+
+~~~python
+lista_animales = ['gato', 'perro', 'pez']
+
+for animal in lista_animales:
+    print "El animal es:", animal
+~~~
+
+### <a name="3-4"/> 3.4. Ejemplos de bucles en C
 
 Ejemplo con bucle `while`. Utilizamos el bucle indeterminado `while`porque no sabemos de antemano el número de iteraciones: el bucle terminará cuando el usuario introduzca un cero.
 
@@ -605,17 +670,15 @@ void main() {
 
 Ejemplo con bucle `for` y `do-while`
 
-~~~c
-const int NUM_PARCIALES = 5; // Número de exámenes parciales
+~~~cconst int NUM_PARCIALES = 5; // Número de exámenes parciales
 int main() {
-
    float nota_parcial, nota_final;
    float suma;
    int i;
    bool nota_incorrecta; // true si la nota introducida es incorrecta (dato auxiliar)
    suma = 0;
    // Introducir las notas de todos los parciales y sumarlas (sólo cuando el dato introducido sea correcto)
-   for (i = 1; i <= NUM_PARCIALES; i++) {
+   for (i = 0; i < NUM_PARCIALES; i++) {
       do {
          printf("Dime tu nota del parcial %d\n", i);
          scanf("%f", &nota_parcial);
@@ -636,7 +699,7 @@ int main() {
 
 Se utiliza para estudiar la secuencia de **estados** por los que pasa un programa, es decir, el valor que van tomando las variables instrucción a instrucción. Las variables almacenan el estado de un programa y mediante los pasos de ejecución se va modificando su estado. Se utilizan principalmente para depurar un programa (corregir errores de ejecución) o para comprender qué hace un programa o parte del mismo.
 
-La traza se lleva a cabo normalmente mediante la ejecución manual de forma secuencial de las sentencias que componen el programa. También existen herramientas de depuración que nos permiten ejecutar paso a paso, o parar la ejecución en un punto concreto para observar el estado del programa.
+La traza se lleva a cabo normalmente mediante la ejecución manual de forma secuencial de las sentencias que componen el programa. También existen herramientas de depuración que nos permiten ejecutar paso a paso, o parar la ejecución en un punto concreto para observar el estado del programa. Por ejemplo el depurador *gdb*.
 
 Ejemplo:
 
@@ -706,36 +769,30 @@ Iteración | dia | capacidadActual
 Escribe un programa que lea cantidades y precios y al final indique el total de la factura. Primero se pregunta la cantidad vendida, tras lo cual el usuario introducirá un número entero positivo.Después se pregunta el precio que será un número decimal positivo. La lectura termina cuando en la cantidad se introduzca un cero. Si es así se escribirá el total.
 
 ~~~c
-
 int main(){
    int n;
-   double precio, total=0;
-
+   double precio, total=0;   
    do{
       do{
          printf("\nIntroduzca la cantidad vendida: ");
          scanf("%d",&n);
-
          if(n<0)
             printf("Cantidad no valida");
-      }while(n<0);
+      }while(n<0);  // validación de datos
 
       if (n>0){
          printf("Introduzca el precio: ");
          do{
             scanf("%lf",&precio);
             if(precio<0)
-               printf("Precio no valido");
+               printf("Precio no valido");
             else
-               total+=n*precio;
-         }while(precio<0);
-      }
-   }while(n!=0); 
-
-   printf("Total vendido = %.2f", total);
-}
-
-~~~
+               total+=n*precio;
+         }while(precio<0); // validación de datos
+      }
+   }while(n!=0); 
+   printf("Total vendido = %.2f", total);
+}~~~
 
 #### Ejercicio 2
 
@@ -748,10 +805,10 @@ int main() {
    do {
       printf("Introduce un num entre 1 y 10: ");
       scanf("%d", &num);
-   }while(num < 1 || num > 10);
+   }while(num < 1 || num > 10);  // validación de datos
 
    for(i = 1; i <= 10; i++) {
-      printf("%d x %d = %d\n", i, num, i * num);		
+      printf("%d x %d = %d\n", i, num, i * num);
    }
 }
 ~~~
@@ -773,7 +830,7 @@ int main(){
   while(col1 <= n){
     printf("%d",col1);
     if(col2 <= n) {
-      printf("\t%d",col2);
+      printf("\t%d",col2);  //\t para tabular
       if(col3 <= n){
         printf("\t%d",col3);
         col3 += 3;
@@ -878,6 +935,6 @@ int main(){
 
 ----
 
-Programación 1, Grado de Robótica, curso 2017-18  
+Programación 1, Grado de Robótica, curso 2018-19  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
