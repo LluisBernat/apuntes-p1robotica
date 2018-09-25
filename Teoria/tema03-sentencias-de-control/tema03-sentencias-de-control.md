@@ -367,25 +367,25 @@ Ejemplo con caracteres (internamente se almacenan con un valor entero, su valor 
 
 ~~~c
     char letra;
-    printf("Introduzca una letra: "); 
-    scanf("%c", &letra); 
+    printf("Introduzca una letra: ");
+    scanf("%c", &letra);
     switch(letra) {
-        case 'a': 
+        case 'a':
             printf("Se ha pulsado una a.");
             break;
-        case 'e': 
+        case 'e':
             printf("Se ha pulsado una a.");
             break;
-        case 'i': 
+        case 'i':
             printf("Se ha pulsado una a.");
             break;
-        case 'o': 
+        case 'o':
             printf("Se ha pulsado una a.");
             break;
-        case 'u': 
+        case 'u':
             printf("Se ha pulsado una a.");
             break;
-        default: 
+        default:
             printf("Otro carácter");
     }
 ~~~
@@ -594,7 +594,7 @@ do {
 
 #### Bucles en Python
 
-**Bucle while en Python** 
+**Bucle while en Python**
 
 ~~~python
 num = 1
@@ -602,7 +602,7 @@ while num <= 10:
     print "El número es: ", num
     num = num + 1
 ~~~
-    
+
 **Bucle for en Python**
 
 Ejemplo que itera sobre una lista:
@@ -670,29 +670,26 @@ void main() {
 
 Ejemplo con bucle `for` y `do-while`
 
-~~~cconst int NUM_PARCIALES = 5; // Número de exámenes parciales
+~~~c
+#define NUM_PARCIALES 5 // Número de exámenes parciales
 int main() {
-   float nota_parcial, nota_final;
-   float suma;
-   int i;
-   bool nota_incorrecta; // true si la nota introducida es incorrecta (dato auxiliar)
-   suma = 0;
-   // Introducir las notas de todos los parciales y sumarlas (sólo cuando el dato introducido sea correcto)
-   for (i = 0; i < NUM_PARCIALES; i++) {
-      do {
-         printf("Dime tu nota del parcial %d\n", i);
-         scanf("%f", &nota_parcial);
-         nota_incorrecta = (nota_parcial < 0.0 || nota_parcial > 10.0);
-         if (nota_incorrecta)
-            printf("La nota introducida es incorrecta\n");
-      } while (nota_incorrecta);
-      suma = suma + nota_parcial;
-   }
-   // Calcular la nota media e imprimirla por pantalla
-   nota_final = suma / NUM_PARCIALES;
-   printf("Tu nota final es: %.2f\n", nota_final); //%.2f imprime sólo dos decimales
-}
+	float nota_parcial, nota_final;
+	float suma;
+	int i;
+	suma = 0;
 
+	// Introducir las notas de todos los parciales y sumarlas (sólo cuando el dato introducido sea correcto)
+	for (i = 1; i <= NUM_PARCIALES; i++) {
+		do {
+			printf("Dime tu nota del parcial %d\n", i);
+			scanf("%f", &nota_parcial);
+		} while (nota_parcial < 0.0 || nota_parcial > 10.0);
+		suma = suma + nota_parcial;
+	}
+	// Calcular la nota media e imprimirla por pantalla
+	nota_final = suma / NUM_PARCIALES;
+	printf("Tu nota final es: %.2f\n", nota_final); //%.2f imprime sólo dos decimales
+}
 ~~~
 
 ## <a name="4"/> 4. Traza de ejecución de un programa
@@ -790,7 +787,7 @@ int main(){
                total+=n*precio;
          }while(precio<0); // validación de datos
       }
-   }while(n!=0); 
+   }while(n!=0);
    printf("Total vendido = %.2f", total);
 }~~~
 
@@ -907,9 +904,9 @@ int main(){
   printf("tamaño del cuadrado: ");
   scanf("%d", &n);
 
-  for (fil = 1; fil <= n; fil++) {
-    for (col = 1; col <= n; col++) {
-      if(fil == 1 || fil == n || col == 1 || col == n)
+  for (fil = 0; fil < n; fil++) {
+    for (col = 0; col < n; col++) {
+      if(fil == 0 || fil == n-1 || col == 0 || col == n-1)
         printf("*");
       else
         printf(" ");
