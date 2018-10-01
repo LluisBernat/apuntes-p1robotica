@@ -344,7 +344,7 @@ switch (contador) {
 Ejemplo de enumeraciones y `switch`:
 
 ~~~c
-enum paloPoker{pica, corazon, trebol, diamante };
+enum paloPoker {pica, corazon, trebol, diamante};
 enum paloPoker miCarta = pica;switch (miCarta) {
    case diamante:
       printf("Diamante \n");
@@ -374,16 +374,16 @@ Ejemplo con caracteres (internamente se almacenan con un valor entero, su valor 
             printf("Se ha pulsado una a.");
             break;
         case 'e':
-            printf("Se ha pulsado una a.");
+            printf("Se ha pulsado una e.");
             break;
         case 'i':
-            printf("Se ha pulsado una a.");
+            printf("Se ha pulsado una i.");
             break;
         case 'o':
-            printf("Se ha pulsado una a.");
+            printf("Se ha pulsado una o.");
             break;
         case 'u':
-            printf("Se ha pulsado una a.");
+            printf("Se ha pulsado una u.");
             break;
         default:
             printf("Otro carácter");
@@ -522,12 +522,24 @@ for (inicialización_contador; condicion; modificación_contador){
 	- Se ejecuta la `modificación_contador`
 	- Se evalúa la `condición`. Si el resultado es verdadero se ejecuta la `secuencia_de_instrucciones`. Si es falso, finaliza.
 
-Ejemplo:
+Ejemplos:
 
 ~~~c
 for (i = 0; i < 10; i++) {
    printf ("Esta es la iteración %d", i);
 }
+~~~
+
+Ejemplo con un incremento de 2 en 2:
+
+~~~c
+int i;
+for (i = 6; i <= 20 ; i+=2) {  // incremento de 2 en 2
+   if (i % 3 == 0)  //  múltiplos de 3
+      printf("%d ", i);
+}
+
+// Imprime 6 12 18
 ~~~
 
 Cualquier bucle `for`se puede escribir con un bucle `while`:
@@ -571,6 +583,8 @@ En los bucles se suelen utilizar variables para unas tareas específicas:
 - **Acumuladores**: Son variables destinadas a contener distintas cantidades provenientes de los resultados obtenidos en operaciones aritméticas previamente analizadas de manera sucesiva, lo que nos permitirá obtener el total acumulado de dichas cantidades. A diferencia de los contadores, no controlan los procesos repetitivos. Su inicialización depende de en qué operación matemática van a ser utilizados.
 - **Interruptores** (switches): también denominados conmutadores o indicadores, son variables que pueden tomar dos únicos valores considerados como lógicos y opuestos entre sí a lo largo de todo el programa (0 ó 1, 1 ó -1, Verdadero o Falso, on/off, etc.).
 Su objetivo es recordar en un determinado lugar del programa un suceso determinado o hacer que dos acciones diferentes se ejecuten alternativamente en un proceso repetitivo. También deben ser inicializados. No se debe abusar de su utilización cuando no sea necesario.
+
+
 
 Ejercicio:
 
@@ -691,6 +705,26 @@ int main() {
 	printf("Tu nota final es: %.2f\n", nota_final); //%.2f imprime sólo dos decimales
 }
 ~~~
+
+Factorial de un número:
+
+~~~c
+int n;
+int res = 1;
+
+printf("Introduce un número n: ");
+scanf("%d", &n);
+
+do {
+   res *= n;
+   n--;
+}while(n > 1);
+
+printf("El factorial de %d es %d\n", n, res);
+~~~
+
+Ejercicio: Haz el ejercicio anterior (factorial de un número) utilizando un bucle for
+
 
 ## <a name="4"/> 4. Traza de ejecución de un programa
 
