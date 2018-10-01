@@ -18,6 +18,8 @@ Ya hemos visto que en C se utilizan funciones de biblioteca (como `printf` o `sc
 
 El uso de funciones definidas por el programador permite dividir un programa grande en un cierto número de componentes más pequeñas, cada una de las cuales con un propósito único e identificable. Por tanto, un programa en C se puede modularizar en subproblemas (programar de forma estructurada) mediante el uso adecuado de funciones.
 
+Podemos decir que la ejecución de cualquier programa en C empieza ejecutando la función `main` instrucción a instrucción desde la primera a la última. Si alguna instrucción hace una llamada a una función (la invoca), el programa deja en espera el punto de ejecución por donde iba y pasa a ejecutar la función, de la misma forma. Cuando termina, vuelve a seguir por la función principal por donde la había dejado. Cada función puede llamar a otras funciones, e incluso a sí misma (recursión).
+
 Una de las habilidades fundamentales del pensamiento computacional es la **abstracción**: definir subproblemas que creen nueva semántica, dividir un problema grande en pequeños problemas (funciones), ... Esto hace el código más fácil de entender, probar, modificar, compartir, reutilizar.
 
 Ventajas de modularizar un programa:
@@ -46,6 +48,8 @@ herramientas para modularizar: procedimientos y funciones. En el lenguaje C sól
 
 Un programa en C está estructurado en funciones. De hecho, `main()` es una función, es la función principal.
 
+Una función es una unidad de código diseñada para realizar una tarea determinada. 
+
 Las funciones en programación son similares a las funciones matemáticas, pudiendo tener argumentos o parámetros.
 
 Ejemplo:
@@ -60,6 +64,10 @@ Ejemplo:
 Las funciones en programación son más generales que las
 funciones matemáticas: pueden tener argumentos  de cualquier tipo y pueden incorporar estructuras de control.
 
+#### Funciones como cajas negras
+
+Podemos plantearnos las funciones como cajas negras, definidas exclusivamente por los datos de entrada (información que hay que suministrarles) y los datos de salida. Lo que suceda dentro de la caja negra no tiene por qué saberse, sólo importa a los que han diseñado la función. El usuario debe saber cómo funciona y cómo se usa, pero no cómo está implementada.
+
 #### Elementos de las funciones
 
 Las funciones en programación también tienen todos los
@@ -71,7 +79,7 @@ del valor que se devuelve (tipo de la función).
 - **Llamada a una función**: Es la instrucción donde se invoca a la función.
 - **Argumentos actuales**: Son los argumentos utilizados en la llamada.
 
-Ejemplo: implementamos en C la función matemática anterior
+Ejemplo: implementamos en C la función matemática f(x)=x+5:
 
 ~~~c
 /*int f: Tipo del valor que devuelve la función (tipo de la función).
@@ -84,14 +92,14 @@ int f (int x) {
 }
 ~~~
 
-Las funciones se pueden definir antes de la función `main()`. En un programa podemos definir una función una vez y utilizarla (o llamarla) siempre que sea necesario. La llamada a una función puede utilizarse en cualquier lugar en el que pueda utilizarse una expresión del tipo de la función.
+En un programa definimos la función una vez y la utilizamos (llamamos) siempre que sea necesario. La llamada a una función puede utilizarse en cualquier lugar en el que pueda utilizarse una expresión del tipo de la función.
 
 Ejemplo: ¿Qué salida produce el siguiente programa para un determinado valor de entrada ?
 
 ~~~c
 #include<stdio.h>
 
-int f (int x);  // Prototipo de la función f
+int f (int x);  // Prototipo o declaración de la función f
 
 void main() {
    int num1, num2 num3;
@@ -132,7 +140,7 @@ Cuando se llama a la función `f(5)`, el argumento **formal** `x` toma el valor 
 		- En cuanto se ejecute una sentencia `return` la función termina, devolviendo el valor que haya en esa sentencia `return`.
 		- El valor devuelto debe ser del tipo especificado `tipo_devuelto`.
 
-#### Prototipo de una función
+#### Prototipo o declaración de una función
 
 Sintaxis:
 
@@ -169,7 +177,8 @@ otras funciones, incluyendo la función `main()`.
 
 ~~~c
 int f (int x){
-   return x + 5;
+   int y = 3;
+   return x + y;
 }
 
 void g (char x){
@@ -181,12 +190,12 @@ void g (char x){
 Si nos fijamos en las variables `x` de las funciones anteriores, vemos que se llaman igual pero
 son variables distintas: tienen distinto ámbito (visibilidad), distinto significado, distinta utilidad...
 
-Otros ejemplos de funciones:
+Otros ejemplos:
 
 ~~~c
 // Esta función recibe dos argumentos y devuelve el menor de ellos
 int minimo(int a, int b) {
-   int menor; // el menor de dos números
+   int menor; // el menor de dos números
 
    menor = a;
    if (b < menor)
@@ -460,7 +469,7 @@ Por lo general, usaremos funciones con paso de parámetros **por valor** cuando 
 	- Las creadas por el programador van entre comillas dobles: "...".
 3. Declaraciones globales: variables y constantes globales (con `const`), constantes simbólicas del preprocesador (con `#define`) y definición de tipos de datos (con `typedef`).
 	- Como norma general, **NO DEBEN USARSE VARIABLES GLOBALES**.
-4. Prototipos de las Funciones.
+4. Prototipos o declaración de las funciones.
 5. Implementación de las funciones, incluida `main()`, que puede ponerse la primera o la última. Las demás funciones deberían ponerse en el mismo orden que sus prototipos para que sea fácil localizarlas.
 	- Antes de cada función debe incluirse un comentario indicando qué hace la función, significado de sus argumentos, etc.
 	- Si se escriben antes las funciones que son llamadas por otras, poniendo `main()` al
@@ -763,6 +772,6 @@ void calculosCifras(int num, int i, int *contador, int *cifra)
 
 ----
 
-Programación 1, Grado de Robótica, curso 2017-18  
+Programación 1, Grado de Robótica, curso 2018-19  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
