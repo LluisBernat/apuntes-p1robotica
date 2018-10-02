@@ -56,13 +56,13 @@ Ejemplo:
 
 > Definición de una función en matemáticas: f(x) = x + 5;
 >
-- f es el nombre de la función que tiene un argumento formal: x.
+- f es el nombre de la función que tiene un parámetro formal: x.
 - La función f, una vez definida, puede usarse o llamarse en algunas expresiones: y = f(4) + 1;
-- Para descubrir el valor de f(4) hay que sustituir el argumento formal x por el valor 4 (argumento actual), f(4) = 4+5 = 9, de donde obtenemos que y = 9 + 1 = 10.
+- Para descubrir el valor de f(4) hay que sustituir el parámetro formal x por el valor 4 (argumento actual), f(4) = 4+5 = 9, de donde obtenemos que y = 9 + 1 = 10.
 - Se dice que la función f devuelve el valor 9.
 
 Las funciones en programación son más generales que las
-funciones matemáticas: pueden tener argumentos  de cualquier tipo y pueden incorporar estructuras de control.
+funciones matemáticas: pueden tener parámetros  de cualquier tipo y pueden incorporar estructuras de control.
 
 #### Funciones como cajas negras
 
@@ -73,11 +73,11 @@ Podemos plantearnos las funciones como cajas negras, definidas exclusivamente po
 Las funciones en programación también tienen todos los
 elementos vistos en las funciones matemáticas:
 
-- **Definición**: Donde se define su nombre, los argumentos que va a tener (nombre, número y tipo) y lo que la función debe hacer o cómo calcular el valor que devuelve la función. También se define el tipo
+- **Definición**: Donde se define su nombre, los parámetroparámetros que va a tener (nombre, número y tipo) y lo que la función debe hacer o cómo calcular el valor que devuelve la función. También se define el tipo
 del valor que se devuelve (tipo de la función).
-- **Argumentos formales**: Son los nombres de los argumentos que aparecen en la definición de una función.
+- **parámetros formales**: Son los nombres de los parámetros que aparecen en la definición de una función.
 - **Llamada a una función**: Es la instrucción donde se invoca a la función.
-- **Argumentos actuales**: Son los argumentos utilizados en la llamada.
+- **parámetros actuales**: Son los parámetros utilizados en la llamada.
 
 Ejemplo: implementamos en C la función matemática f(x)=x+5:
 
@@ -85,7 +85,7 @@ Ejemplo: implementamos en C la función matemática f(x)=x+5:
 /*int f: Tipo del valor que devuelve la función (tipo de la función).
 Debe coincidir con el tipo de la expresión que hay después de la palabra return
 f: nombre de la función
-(int x): argumento formal y su tipo*/
+(int x): parámetro formal y su tipo*/
 
 int f (int x) {
 	return x + 5; /*valor que devuelve la función*/
@@ -119,19 +119,19 @@ int f (int x) {   // Definición de la función f
 }
 ~~~
 
-Cuando se llama a la función `f(5)`, el argumento **formal** `x` toma el valor de `5`que es el parámetro **actual**.
+Cuando se llama a la función `f(5)`, el parámetro **formal** `x` toma el valor de `5`que es el parámetro **actual**.
 
 ### Sintaxis de una función en C
 
 ~~~c
-<tipo_devuelto> <nombre_funcion> (<argumentos formales>) {
+<tipo_devuelto> <nombre_funcion> (<parámetros formales>) {
 	<cuerpo de la función>
 }
 ~~~
 
 - El `<tipo_devuelto>` indica el tipo del valor que devuelve la función. En el caso del ejemplo de la función `mínimo`, el tipo de retorno es `int`. Es posible que la función no devuelva nada, en ese caso el tipo de devuelto es `void`.
 - El `<nombre_función>`, en nuestro ejemplo `minimo`. Debe ser indicativo de la funcionalidad desarrollada. Usaremos la misma norma que para las variables
-- `<argumentos formales>`: es una lista con la declaración de todos los argumentos formales (tipo y nombre), separados por comas. Puede estar vacía. Los argumentos formales permiten que se transfiera información desde el punto del programa en donde se llama a la función a ésta. Cada argumento formal debe ser del mismo tipo que el dato que recibe desde el punto de llamada.
+- `<parámetros formales>`: es una lista con la declaración de todos los parámetros formales (tipo y nombre), separados por comas. Puede estar vacía. Los parámetros formales permiten que se transfiera información desde el punto del programa en donde se llama a la función a ésta. Cada parámetro formal debe ser del mismo tipo que el dato que recibe desde el punto de llamada.
 - El `<cuerpo de la función>`  contiene las instrucciones que realizan la tarea concreta de la función. Es la implementación de la función.
 	- Pueden declararse variables locales a la función.
 	- Puede contener la sentencia `return` para devolver el valor que corresponda.
@@ -148,11 +148,11 @@ Sintaxis:
 <tipo_devuelto> <nombre_f> (<tipo_args_formales>);
 ~~~
 
-- `<tipo_args_formales>`: Es una lista con la declaración de todos los argumentos formales, separados por comas. Pueden ponerse sólo los tipos (sin el nombre de los argumentos).
+- `<tipo_args_formales>`: Es una lista con la declaración de todos los parámetros formales, separados por comas. Pueden ponerse sólo los tipos (sin el nombre de los parámetros).
 - El resto es como la sintaxis de definición de una función, pero sin el cuerpo.
 
 El prototipo, también llamado declaración de una función o cabecera (*header*) sirve para especificar o declarar que existe una función con cierto número
-y tipo de argumentos y que devuelve un determinado tipo de datos.
+y tipo de parámetros y que devuelve un determinado tipo de datos.
 
 El prototipo no define el proceso que se realiza, el cual se especifica en la definición de la función.
 El prototipo de una función debe ser coherente con
@@ -169,7 +169,7 @@ char preguntaUsuario ();
 
 #### Variables locales a una función
 
-Las **variables locales** son aquellas que se declaran dentro de una función. Las variables de sus argumentos formales son locales a la función:
+Las **variables locales** son aquellas que se declaran dentro de una función. Las variables de sus parámetros formales son locales a la función:
 
 - Sólo tienen sentido y sólo pueden usarse dentro de esa función: su **ámbito es local** a la función
 - Su nombre es totalmente independiente de las variables locales de
@@ -193,7 +193,7 @@ son variables distintas: tienen distinto ámbito (visibilidad), distinto signifi
 Otros ejemplos:
 
 ~~~c
-// Esta función recibe dos argumentos y devuelve el menor de ellos
+// Esta función recibe dos parámetros y devuelve el menor de ellos
 int minimo(int a, int b) {
    int menor; // el menor de dos números
 
@@ -205,7 +205,7 @@ Otros ejemplos:
 ~~~
 
 ~~~c
-// Esta función no recibe argumentos e imprime la cadena de texto "hola mundo"
+// Esta función no recibe parámetros e imprime la cadena de texto "hola mundo"
 void holamundo(void) {
    printf("Hola mundo\n");}
 ~~~
@@ -256,12 +256,12 @@ Esta segunda forma es más laboriosa pero evita errores en el orden de las funci
 
 Cuando se produce la llamada a una función, se transfiere la ejecución del programa al cuerpo de la función. Se crea un **nuevo ámbito local** donde la función se ejecuta. Pasos:
 
-1. Se declaran las variables de los argumentos formales.
-2. Se copia el valor de los argumentos actuales en las
-variables de los argumentos formales.
-	- Esta copia se hace por orden: el primer argumento actual en
-el primer argumento formal, el segundo en el segundo...
-	Esta copia no se hace por el nombre de los respectivos argumentos formales y actuales.
+1. Se declaran las variables de los parámetros formales.
+2. Se copia el valor de los parámetros actuales en las
+variables de los parámetros formales.
+	- Esta copia se hace por orden: el primer parámetro actual en
+el primer parámetro formal, el segundo en el segundo...
+	Esta copia no se hace por el nombre de los respectivos parámetros formales y actuales.
 	- Se copia el valor: si el argumento
 actual es una variable, se copia su valor en el correspondiente argumento formal, pero ambos argumentos actuales y formales son variables distintas.
 3. Se declaran las variables locales a la función.
@@ -300,14 +300,14 @@ float func (float x, float y){
 
 #### Paso de parámetros por referencia
 
-En el paso de argumentos **por valor**, si los argumentos formales se modifican, los argumentos actuales no cambian.
+En el paso de parámetros **por valor**, si los argumentos formales se modifican, los argumentos actuales no cambian.
 
 Sin embargo, a veces resulta muy útil poder modificar en una función los argumentos actuales. Esto se consigue usando el paso de argumentos **por referencia**:
 
 - Esto es otra forma de conseguir que una función devuelva valores (aparte de la instrucción `return`).
 - Además, de esta forma una función puede devolver tantos valores como se deseen.
 
-En lenguaje C, por defecto todos los pasos de argumentos son por valor. Se llama paso de argumentos por referencia a una técnica
+En lenguaje C, por defecto todos los pasos de parámetros son por valor. Se llama paso de parámetros por referencia a una técnica
 que permite a una función modificar variables utilizadas como argumentos actuales.
 
 La función recibe la referencia a la posición de memoria donde se encuentra el valor a utilizar.Este parámetro debe ser una variable, la cual puede o no contener un valor inicial.Las modificaciones realizadas sobre el parámetro dentro de la función se trasladan a la variable actual ya que se realizan sobre su zona de memoria.
