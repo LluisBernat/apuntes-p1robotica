@@ -206,7 +206,7 @@ Otros ejemplos:
 
 ~~~c
 // Esta función no recibe parámetros e imprime la cadena de texto "hola mundo"
-void holamundo(void) {
+void holamundo() {
    printf("Hola mundo\n");}
 ~~~
 
