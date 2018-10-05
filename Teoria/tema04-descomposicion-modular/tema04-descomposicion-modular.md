@@ -48,7 +48,7 @@ herramientas para modularizar: procedimientos y funciones. En el lenguaje C sól
 
 Un programa en C está estructurado en funciones. De hecho, `main()` es una función, es la función principal.
 
-Una función es una unidad de código diseñada para realizar una tarea determinada. 
+Una función es una unidad de código diseñada para realizar una tarea determinada.
 
 Las funciones en programación son similares a las funciones matemáticas, pudiendo tener argumentos o parámetros.
 
@@ -460,6 +460,37 @@ void pedirXY(int *x, int *y) {
 ~~~
 
 Por lo general, usaremos funciones con paso de parámetros **por valor** cuando sólo queramos devolver **un resultado**, y éste se devuelve con `return`. Y cuando se necesite devolver **más de un resultado**, usaremos funciones con paso de parámetros **por referencia**, siendo esta función tipo `void`.
+
+#### Funciones en Python
+
+En Python, la definición de funciones se realiza mediante la instrucción `def` más un nombre de función descriptivo seguido de paréntesis de apertura y cierre y `:`
+
+~~~python
+def mi_funcion():
+    print "Hola Mundo"
+~~~
+
+Cuando una función, haga un retorno de datos, éstos, pueden ser asignados a una variable:
+
+~~~python
+def funcion():
+    return "Hola Mundo"
+
+frase = funcion()
+print frase
+~~~
+
+En Python todos los parámetros se pasan por valor. El paso por referencia es la manera en que los lenguajes (como C) pueden devolver más de un valor en una misma función. En cambio, Python permite devolver varios datos utilizando tuplas o listas. Por ejemplo:
+
+~~~Python
+a = 1
+b = 2
+c = 3
+def f():
+    return 4, 5, 6
+a, b, c = f()
+# Ahora "a" es 4, "b" es 5 y "c" es 6.
+~~~
 
 ## <a name="5"/> 5. Estructura de un programa en C
 
