@@ -522,6 +522,7 @@ La mayoría de lenguajes de programación proporcionan una colección de proc
 
 <img src="imagenes/predef.png" width="500px"/>
 
+---
 
 ## <a name="7"/> 7. Ejercicios
 
@@ -534,11 +535,76 @@ La mayoría de lenguajes de programación proporcionan una colección de proc
 3. Escribe un programa en C que permita convertir grados Celsius a Fahrenheit y viceversa. El programa debe mostrar un menú para poder seleccionar qué opciónse desea (más la opción terminar) y preguntar la temperatura que desea convertir. **Cada una de las conversiones se debe realizar en una función distinta**.	- La conversión de grados Celsius a grados Fahrenheit se obtiene multiplicando la temperatura en Celsius por 1,8 y sumando 32.	- La conversión de grados Fahrenheit a grados Celsius se obtiene restándole 32 a la temperatura en grados Fahrenheit y dividiéndolo por 1,8.
 
 4. Escribe la función `binarioADecimal` que reciba como parámetro un número en binario y devuelva su correspondiente número en decimal. Después, pruébala desde `main`.
-5. Escribe un programa que realice dos operaciones a partir de un número entero n. Las operaciones se calcularán en una misma función. La función `main`se encargará de mostrar los resultados por pantalla. Las operaciones a realizar son:
- - Calcular de cuántas cifras se compone y
- - mostrar la cifra i-ésima de dicho número (la posición i debe pedirse al usuario).
+
+5. Escribe un programa que realice dos operaciones a partir de un número entero n. Las operaciones a realizar son:
+ - Calcular de cuántas cifras se compone
+ - Mostrar la cifra i-ésima de dicho número (la posición i debe pedirse al usuario).
+
+ Ejemplo de ejecución:
+
+ ~~~c
+ Introduce num: 5634
+ El num 5634 tiene 4 cifras
+ La cifra 2 del número 5634 es 3
+ ~~~
+
+6. Escribe un programa que pida caracteres hasta introducir el '.'. El programa deberá mostrar el primer carácter introducido, el último y el total de caracteres (incluido el '.').
+
+7. Dada la siguiente función que calcula y muestra por pantalla la suma de los números enteros que hay entre un intervalo y que se lleva a cabo para 3 intervalos:
+
+~~~c
+void SumaIntervalos() {
+	int suma, i;
+
+	suma = 0;
+	printf("La suma de los números entre 2 y 5 es: ");
+	for (i=2; i<=5; i++) {
+		suma = suma + i;
+	}
+	printf("%d\n", suma);
+
+	suma = 0;
+	printf("La suma de los números entre 0 y 3 es: ");
+	for (i=0; i<=3; i++) {
+		suma = suma + i;
+	}
+	printf("%d\n", suma);
+
+	suma = 0;
+	printf("La suma de los números entre 1 y 4 es: ");
+	for (i=1; i<=4; i++) {
+		suma = suma + i;
+	}
+	printf("%d\n", suma);
+}
+~~~
+
+La ejecución de dicha función, muestra por pantalla los siguientes mensajes:
+
+~~~c
+La suma de los números entre 2 y 5 es: 14
+La suma de los números entre 0 y 3 es: 6
+La suma de los números entre 1 y 4 es: 10
+~~~
+
+Se pide definir las funciones necesarias (al menos 2) que permitan generalizar y evitar código duplicado, pidiendo por teclado los datos necesarios.
+
+Un ejemplo de ejecución equivalente a la anterior, pero solicitando datos por teclado  sería:
+
+~~~c
+Introduce el número de intervalos: 3
+Introduce el intervalo: 2 5
+la suma de los números entre 2 y 5 es: 14
+Introduce el intervalo: 0 3
+la suma de los números entre 0 y 3 es: 6
+Introduce el intervalo: 1 4
+la suma de los números entre 1 y 4 es: 10
+~~~
+
+---
 
 #### Solución ejercicio 1
+
 ~~~c
 ///////////
 // Prototipos de funciones
@@ -748,57 +814,124 @@ int binarioADecimal(int n) {
 #### Solución ejercicio 5
 
 ~~~c
-///////////
-// Prototipo de función
-///////////
-void calculosCifras(int, int, int*, int*);
+int pedirNum();
+int numCifras(int);
+int cifra_i_esima(int, int);
 
-///////////
-// Función principal
-///////////
-int main() {
-   int num, cifras, cifra_i, i;
+int main(){
+   int n, cifras, cifra;
 
-   printf("Introduce un número: ");
-   scanf("%d", &num);
-   printf("Introduce un índice pra obtener la cifra-iesima: ");
-   scanf("%d", &i);
+   n = pedirNum();
+   cifras = numCifras(n);
 
-   calculosCifras(num, i, &cifras, &cifra_i);
+   printf("El num %d tiene %d cifras\n", n, cifras);
+   cifra = cifra_i_esima(n, 2);
+   printf("La cifra 2 del número %d es %d\n", n, cifra);
 
-   printf("El numero %d tiene %d cifras\n", num, cifras);
-   printf("La cifra con índice %d es %d\n", i, cifra_i);
+   return 0;
 }
 
-//////////
-// Definición de función
-/////////
-//Función que calcula la cantidad de cifras
-void calculosCifras(int num, int i, int *contador, int *cifra)
-{
-   int numero = num, posicion;
-   *contador = 1;
+int pedirNum() {
+   int n;
 
-   // Cálculo del número de cifras
-   while(numero >= 10) {
-      numero = numero / 10;
-      (*contador)++;
+   printf("Introduce num: ");
+   scanf("%d", &n);
+
+   return n;
+}
+
+int numCifras(int num) {
+   int contador = 1;
+
+   while(num >= 10) {
+      num = num / 10;
+      contador++;
    }
 
-   *cifra = 0;
-   numero = num;
-   posicion = 1;
+   return contador;
+}
 
-   // Cálculo de la cifra i-ésima
-   *cifra = numero % 10;
-   while(numero > 9 && posicion < i) {
-      numero = numero / 10;
-      *cifra = numero % 10;
-      posicion++;
+int cifra_i_esima(int num, int i) {
+   int posicion = 1;
+   int cifra;
+
+   cifra = num % 10;
+   while(num > 9 && posicion < i) {
+      num = num / 10;  // num /= 10;
+      cifra = num % 10;
+      posicion ++;
    }
+
+   return cifra;
 }
 ~~~
 
+#### Solución ejercicio 6
+
+~~~c
+void cuentaCaracteres(char *, char *, int*);
+
+int main() {
+   char primero, ultimo;
+   int total;
+
+   cuentaCaracteres(&primero, &ultimo, &total);
+   printf("El primer carácter es: %c\n", primero);
+   printf("El último es: %c\n", ultimo);
+   printf("El total es: %d\n", total);
+
+
+   return 0;
+}
+
+void cuentaCaracteres(char *primero, char *ultimo, int *total){
+   char caracter;
+   *total = 0;
+
+   do {
+      printf("Introduce un carácter: ");
+      scanf("\n%c", &caracter);
+
+      if (*total == 0)
+         *primero = caracter;
+      else if (caracter != '.')
+         *ultimo = caracter;
+
+      (*total)++;
+   }while(caracter != '.');
+
+}
+~~~
+
+#### Solución ejercicio 7
+
+~~~c
+void solucion() {
+	int a, b;
+	int n, i;
+
+	printf("Introduce el número de intervalos: ");
+	scanf("%d", &n);
+
+	for (i = 0; i < n; i++) {
+		printf("Introduce el intervalo: ");
+		scanf("%d %d", &a, &b);
+		printf("la suma de los números entre %d y %d es: ",a,b);
+		printf("%d\n", sumaIntervalo(a,b));
+	}
+}
+
+int sumaIntervalo(int a, int b) {
+	int suma = 0;
+	int i;
+
+	for (i = a; i <= b; i++) {
+		suma = suma + i;
+	}
+	return(suma);
+}
+
+~~~
 
 
 ----
