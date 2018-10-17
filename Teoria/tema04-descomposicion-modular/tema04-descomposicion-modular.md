@@ -298,6 +298,44 @@ float func (float x, float y){
 
 ~~~
 
+Ejemplo de funciones con enumerados:
+
+~~~c
+typedef enum {Avance, Retroceso} TMotor;
+
+TMotor leerPalanca();
+void modificaEstadoMotor(TMotor);
+
+int main() {
+   TMotor estadoMotor;
+
+   estadoMotor = leerPalanca();
+   modificaEstadoMotor(estadoMotor);
+}
+
+TMotor leerPalanca() {
+   TMotor direccionMotor;
+
+   do {
+      printf("¿En qué posición está la palanca del cortacésped? 0-Avance 1-Restroceso\n");
+      scanf("%d", &direccionMotor);
+   }while(direccionMotor != Avance && direccionMotor != Retroceso);
+   
+   return direccionMotor;
+}
+
+void modificaEstadoMotor(TMotor estado) {
+   switch(estado) {
+      case Avance:
+         //Llamada a función para modificar el motor hacia adelante
+         break;
+      case Retroceso:
+         //Llamada a función para modificar el motor hacia atrás
+         break;
+   }
+}
+~~~
+
 #### Paso de parámetros por referencia
 
 En el paso de parámetros **por valor**, si los argumentos formales se modifican, los argumentos actuales no cambian.
