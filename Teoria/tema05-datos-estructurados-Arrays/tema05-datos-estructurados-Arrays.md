@@ -20,13 +20,13 @@ Los tipos estructurados o compuestos pueden almacenar más de un elemento (valor
 	- Unidimensionales
 	- Multidimensionales
 	- Cadenas de caracteres
-- **Registros** o estructuras: una variable de tipo registro puede almacenar elementos de**distinto tipo**. En C, se utiliza el tipo `struct`equivalente al `record` de otros lenguajes.  
+- **Registros** o estructuras: una variable de tipo registro puede almacenar elementos de **distinto tipo**. En C, se utiliza el tipo `struct`equivalente al `record` de otros lenguajes.  
 
 ## <a name="2"/> 2. Tipo Array  
 
-Es una estructura de datos que contiene una colección de datos finita, homogénea y ordenada de elementos, y se almacena en posiciones de memoria contiguas.- **finita**: debe determinarse cuál será el número máximo de elementos que podrán almacenarse en el array- **homogénea**: todos los elementos deben ser del mismo tipo- **ordenada**: se puede determinar cuál es el n-ésimo elemento del array   
+Es una estructura de datos que contiene una colección de datos finita, homogénea y ordenada de elementos, y se almacena en posiciones de memoria contiguas. - **finita**: debe determinarse cuál será el número máximo de elementos que podrán almacenarse en el array- **homogénea**: todos los elementos deben ser del mismo tipo- **ordenada**: se puede determinar cuál es el n-ésimo elemento del array   
 
-A un elemento específico de un array se accede mediante un **índice**, que siempre empieza en la posición 0 (la primera posición del array). La última posición tendrá como índice el número de elementos del array menos uno.
+A un elemento específico de un array se accede mediante un **índice**, que siempre empieza en la posición 0 (la primera posición del array) y se numeran consecutivamente 0, 1, 2, 3, etc. La última posición tendrá como índice el número de elementos del array menos uno.
 
 ### <a name="2-1"/> 2.1  Definición de un array
 
@@ -44,13 +44,17 @@ int numeros[10];
 
 define un array llamado `numeros` que está formado por 10 elementos de tipo `int`. A cada elemento se acccede mediante un índice entre 0 y `dimension-1` (0 y 9 en este caso).
 
+La declaración anterior hace que el compilador reserve espacio sufuciente para contener 10 valores enteros. En C los enteros ocupan 2 bytes, por lo que un array de 10 enteros ocupa 20 bytes de memoria.
+
 **Sintaxis** para acceder a un elemento del array:
 
 ~~~c
 array[indice]
 ~~~
 
-Así, por ejemplo, `numeros[0]` representa el primer elemento del array, y `numeros[6]` el séptimo elemento. Hay que tener cuidado y no utilizar valores de índices fuera del rango ya que provocaría errores en la ejecución de nuestro programa.
+Así, por ejemplo, `numeros[0]` representa el primer elemento del array, y `numeros[6]` el séptimo elemento.
+
+Hay que tener cuidado y no utilizar valores de índices fuera del rango ya que provocaría errores en la ejecución de nuestro programa. El compilador de C no comprueba que los índices de un array estén dentro del rango definido, por lo que si se intenta acceder a un índice fuera del rango, tendremos un error durante la ejecución de nuestro programa.
 
 Otro ejemplo:
 
@@ -114,9 +118,8 @@ void inicializarArray(float calificaciones[]) {
 
 - En lenguaje C, el paso de parámetros de los arrays siempre es por **referencia**.
 - En lenguaje C, las funciones no pueden devolver un tipo array estático. Para modificar un array, ha de ser pasado como parámetro (siempre es por referencia y por tanto se modificará el array original)
-- Es imposible que la función determine el tamaño del array.
-- Si se necesita el tamaño en la función, se tiene que pasar como argumento
-- Si el tamaño es fijo, se puede utilizar una constante#### Ejemplos
+- Es imposible que la función determine el tamaño del array. Si se necesita el tamaño en la función, se tiene que pasar como argumento
+- Si el número de elementos es fijo, se puede utilizar una constante#### Ejemplos
 
 Ejemplo 1:
 
@@ -441,10 +444,10 @@ Para trabajar con cadenas de caracteres, en C tenemos la librería `string.h`:
 
 Algunas de las funciones que incluye:
 
-- **`int strlen(const char *s);`** Devuelve el tamaño de la cadena antes de `'\0'`
-- **`char *strcpy(char *dest, const char *src);`**Copia la cadena origen `src` en la cadena destino `dest`.
-- **`char *strcat(char *dest, const char *src);`**Concatena la cadena origen `src` al final de la cadena destino `dest`
-- **`int strcmp(const char *s1, const char *s2);`**
+- **`int strlen(char *s);`** Devuelve el tamaño de la cadena antes de `'\0'`
+- **`char *strcpy(char *dest, char *src);`**Copia la cadena origen `src` en la cadena destino `dest`.
+- **`char *strcat(char *dest, char *src);`**Concatena la cadena origen `src` al final de la cadena destino `dest`
+- **`int strcmp(char *s1, char *s2);`**
 Compara dos cadenas. Devuelve 0 en caso de que sean iguales. <0 si la primera cadena es menor y >0 si la primera cadena es mayor. Orden lexicográfico
 
 `strcpy` y `strcat` devuelven un puntero a la cadena
@@ -703,6 +706,6 @@ void escribirMatriz(TMatriz matriz) {
 
 ----
 
-Programación 1, Grado de Robótica, curso 2017-18  
+Programación 1, Grado de Robótica, curso 2018-19  
 © Departamento Ciencia de la Computación e Inteligencia Artificial, Universidad de Alicante  
 Cristina Pomares Puig
