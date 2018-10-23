@@ -553,15 +553,6 @@ char numero[11] = "1234567890";
 printf( "Convertimos la cadena \"%s\" en un long int: %u\n", numPtr, atol(numero) );
 ~~~
 
-- **`int sprintf(char *s,const char *f [,argumento,... ])`**: escribe en `s` la cadena de caracteres especificada en `f` (formato). El resto de parámetros es exactamente igual que en printf().
-
-~~~c
-int numero = 123;
-char cadena[4];
-sprintf(cadena, "%d", numero);
-printf("%s\n", cadena); // imprime "123"
-~~~
-
 ### Ejemplos de arrays utilizando `typedef`
 
 
